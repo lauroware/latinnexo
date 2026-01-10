@@ -10846,3 +10846,49 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+
+/* === LatinNexo brand overrides (match logo gradient) === */
+:root{
+  --bs-primary: #1EADD2;
+  --bs-primary-rgb: 30,173,210;
+
+  --bs-secondary: #9D3796;
+  --bs-secondary-rgb: 157,55,150;
+
+  --bs-link-color: #1EADD2;
+  --bs-link-hover-color: #DC2F88;
+
+  --bs-dark: #0B0B0B;
+  --bs-dark-rgb: 11,11,11;
+}
+
+/* Keep dark sections consistent */
+.bg-dark{ background-color:#0B0B0B !important; }
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus{
+  color: #1EADD2 !important;
+}
+
+/* Buttons */
+.btn-primary{
+  --bs-btn-bg: #1EADD2;
+  --bs-btn-border-color: #1EADD2;
+  --bs-btn-hover-bg: #169fbe;
+  --bs-btn-hover-border-color: #169fbe;
+  --bs-btn-focus-shadow-rgb: 30,173,210;
+  --bs-btn-active-bg: #138da8;
+  --bs-btn-active-border-color: #138da8;
+}
+.btn-outline-primary{
+  --bs-btn-color: #1EADD2;
+  --bs-btn-border-color: #1EADD2;
+  --bs-btn-hover-bg: #1EADD2;
+  --bs-btn-hover-border-color: #1EADD2;
+  --bs-btn-hover-color: #fff;
+}
+
+/* Accent utilities (optional) */
+.text-accent{ color:#DC2F88 !important; }
+.bg-gradient-brand{
+  background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important;
+}
