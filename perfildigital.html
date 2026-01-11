@@ -1,138 +1,440 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="LATIN NEXO: perfiles con QR, invitaciones digitales, menú QR y desarrollo web a medida. Nosotros gestionamos cambios y mantenimiento para que siempre se vea profesional." />
-    <meta name="author" content="LATIN NEXO" />
-    <title>LATIN NEXO — Identidad digital con QR</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="LATIN NEXO: perfiles digitales 100% personalizables con QR/NFC. Ideal para influencers, youtubers y profesionales. Tarjetas, lanyards y soporte." />
+  <meta name="author" content="LATIN NEXO" />
+  <title>LATIN NEXO — Perfiles</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
 
-    <style>
-      .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
-      .feature-icon{
-        width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
-        border-radius: 14px;
-      }
-      .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
-      .text-brand{ color:#1EADD2 !important; }
-      .border-brand{ border-color:#1EADD2 !important; }
-      .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
-      .btn-brand:hover{ filter: brightness(1.05); }
-      .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
-      .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
-      .muted{ color: rgba(255,255,255,.7); }
+  <style>
+    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+    .feature-icon{
+      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+      border-radius: 14px;
+    }
+    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+    .text-brand{ color:#1EADD2 !important; }
+    .border-brand{ border-color:#1EADD2 !important; }
+    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+    .btn-brand:hover{ filter: brightness(1.05); }
+    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+    .muted{ color: rgba(255,255,255,.7); }
 
-      /* UX micro mejoras */
-      .service-card{
-        border: 1px solid rgba(0,0,0,.06);
-        border-radius: 18px;
-        padding: 22px;
-        height: 100%;
-        background: #fff;
-        transition: transform .15s ease, box-shadow .15s ease;
-      }
-      .service-card:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 10px 26px rgba(0,0,0,.08);
-      }
-      .service-title{ margin-bottom: 8px; }
-      .service-meta{ font-size: .95rem; }
-      .service-list{
-        padding-left: 1.1rem;
-        margin: .75rem 0 0 0;
-      }
-      .service-list li{ margin-bottom: .25rem; }
-    </style>
-  </head>
+    /* Cards consistentes */
+    .service-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 22px;
+      height: 100%;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .service-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .service-list{
+      padding-left: 1.1rem;
+      margin: .75rem 0 0 0;
+    }
+    .service-list li{ margin-bottom: .25rem; }
 
-  <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+    .note-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      background:#fff;
+    }
+  </style>
+</head>
 
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="fw-bold">LATIN NEXO</span>
-          </a>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold">LATIN NEXO</span>
+      </a>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
-               <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
-        
-              <li class="nav-item ms-lg-3">
-                <a class="btn btn-brand btn-sm px-3" href="#contacto">
-                  Cotizar por WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
- 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
 
-      <!-- Contact / CTA -->
-      <section class="py-5" id="contacto">
-        <div class="container px-5 my-5">
-          <aside class="bg-brand rounded-3 p-4 p-sm-5">
-            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-              <div class="mb-4 mb-xl-0">
-                <div class="fs-3 fw-bold text-white">¿Listo para trabajar con nosotros?</div>
-                <div class="muted">Escribinos y te guiamos al servicio ideal.</div>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20PERFIL%20digital.%20Mi%20nombre%20es%3A">
+              Cotizar por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="my-4 text-center text-lg-start">
+            <div class="hero-kicker text-white-50 mb-3">
+              Perfil digital · QR / NFC · Tarjetas y lanyards
+            </div>
+
+            <h1 class="display-5 fw-bolder text-white mb-2">
+              Tu perfil <span class="text-brand">100% personalizable</span> en un link.
+            </h1>
+
+            <p class="lead fw-normal text-white-50 mb-4">
+              Ideal para <strong>influencers, youtubers, creadores</strong> y profesionales.
+              Mostrá tu información, redes y enlaces en una página prolija.
+              Además, lo podés llevar en <strong>tarjeta con QR o NFC</strong> y también en <strong>lanyard</strong> para eventos.
+            </p>
+
+            <div class="row g-3 mt-3">
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-brush fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Diseño a medida</div>
+                    <div class="muted">Colores, secciones y estilo.</div>
+                  </div>
+                </div>
               </div>
-
-              <div class="ms-xl-4">
-                <div class="d-grid gap-2 d-sm-flex">
-                  <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
-                     href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A">
-                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
-                  </a>
-                  <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Consulta">
-                    <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-                  </a>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-phone fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Mobile first</div>
+                    <div class="muted">Rápido y claro en celular.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-qr-code-scan fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">QR / NFC</div>
+                    <div class="muted">Tarjeta o lanyard listo.</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </aside>
-        </div>
-      </section>
 
-    </main>
-
-    <!-- Footer-->
-    <footer class="bg-dark py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0 text-white">
-               &copy; Lauro Ware 2026 <span id="year"></span>
+            <div class="mt-4">
+              <a class="btn btn-brand btn-lg px-4" href="#incluye">Qué incluye</a>
+              <a class="btn btn-outline-light btn-lg px-4 ms-2" href="#como-funciona">Cómo funciona</a>
             </div>
-          </div>
-          <div class="col-auto">
-            <a class="link-light small" href="#faq">FAQ</a>
-            <span class="text-white mx-1">&middot;</span>
-            <a class="link-light small" href="#contacto">Contacto</a>
+
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <!-- QUÉ INCLUYE -->
+  <section class="py-5 bg-light" id="incluye">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Qué incluye el perfil</h2>
+        <p class="lead fw-normal text-muted mb-0">
+          Un perfil profesional para compartir en un link o con QR/NFC.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-person-circle fs-4"></i></div>
+            <h3 class="h5 fw-bold">Información personal</h3>
+            <p class="text-muted mb-0">Nombre, bio, foto, contacto y ubicación (si querés).</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-share fs-4"></i></div>
+            <h3 class="h5 fw-bold">Links y redes</h3>
+            <p class="text-muted mb-0">Instagram, TikTok, YouTube, Spotify, Twitch, OnlyFans, lo que uses.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-megaphone fs-4"></i></div>
+            <h3 class="h5 fw-bold">Botones de acción</h3>
+            <p class="text-muted mb-0">WhatsApp, “Reservar”, “Comprar”, “Ver catálogo”, “Mis cursos”, etc.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-palette fs-4"></i></div>
+            <h3 class="h5 fw-bold">Personalización total</h3>
+            <p class="text-muted mb-0">Colores, secciones, estilo, orden y contenido según tu marca.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-credit-card-2-front fs-4"></i></div>
+            <h3 class="h5 fw-bold">Opcional: Tarjeta física con QR / NFC</h3>
+            <p class="text-muted mb-0">Impresión y diseño listos para compartir tu perfil en 1 toque.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-badge-3d fs-4"></i></div>
+            <h3 class="h5 fw-bold">Opcional: Lanyards para eventos</h3>
+            <p class="text-muted mb-0">Ideal para feriantes, agentes turísticos y eventos profesionales.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+          <div class="note-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="feature-icon bg-brand text-white"><i class="bi bi-stars fs-4"></i></div>
+              <div>
+                <div class="fw-bold">Tip pro</div>
+                <div class="text-muted">
+                  Si sos creador/a, tu perfil puede ser tu “link en bio” premium: un solo link con todo y estética propia,
+                  más profesional que un linktree genérico.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+<section class="py-5 bg-light" id="precios">
+  <div class="container px-5 my-5">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bolder">Precios y planes</h2>
+      <p class="lead text-muted mb-0">
+        Soluciones claras para personas, creadores y empresas.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- PERFIL INDIVIDUAL -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="feature-icon bg-brand text-white mb-3">
+            <i class="bi bi-person-badge fs-4"></i>
+          </div>
+
+          <h3 class="h5 fw-bold">Perfil digital personalizado</h3>
+          <p class="text-muted mb-3">
+            Ideal para influencers, creadores y profesionales.
+          </p>
+
+          <div class="fs-3 fw-bold text-brand mb-1">$25.000</div>
+          <div class="text-muted mb-3">Pago único · Creación del perfil</div>
+
+          <ul class="service-list text-muted">
+            <li>Diseño 100% personalizado</li>
+            <li>Información personal y bio</li>
+            <li>Links y redes sociales</li>
+            <li>Botones de contacto / acción</li>
+            <li>Alojamiento incluido en LATIN NEXO</li>
+            <li>QR permanente</li>
+          </ul>
+
+          <div class="mt-3">
+            <span class="badge bg-light text-dark border">
+              Actualizaciones: $4.000 c/u
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCESORIOS -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="feature-icon bg-brand text-white mb-3">
+            <i class="bi bi-qr-code fs-4"></i>
+          </div>
+
+          <h3 class="h5 fw-bold">Accesorios con QR / NFC</h3>
+          <p class="text-muted mb-3">
+            Complementos físicos para compartir tu perfil.
+          </p>
+
+          <ul class="service-list text-muted">
+            <li><strong>Lanyard personalizado:</strong> $20.000</li>
+            <li><strong>Tarjeta personal con QR o NFC:</strong> $20.000</li>
+            <li>Diseño alineado a tu perfil</li>
+            <li>QR vinculado al perfil digital</li>
+          </ul>
+
+          <div class="mt-3">
+            <span class="badge bg-light text-dark border">
+              Ideal para eventos y ferias
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPRESAS -->
+      <div class="col-md-12 col-lg-4">
+        <div class="service-card border-brand">
+          <div class="feature-icon bg-brand text-white mb-3">
+            <i class="bi bi-building fs-4"></i>
+          </div>
+
+          <h3 class="h5 fw-bold">Planes para empresas</h3>
+          <p class="text-muted mb-3">
+            Soluciones escalables para equipos, eventos y marcas.
+          </p>
+
+          <ul class="service-list text-muted">
+            <li>Perfiles por cantidad</li>
+            <li>Tarjetas o lanyards corporativos</li>
+            <li>Gestión centralizada</li>
+            <li>Dominio propio (ej: perfil.empresa.com)</li>
+            <li>Alojamiento anual incluido</li>
+            <li>Diseño alineado a la marca</li>
+          </ul>
+
+          <div class="mt-4">
+            <a class="btn btn-outline-brand w-100"
+               target="_blank"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20plan%20CORPORATIVO.%20Empresa%3A">
+              Cotizar plan a medida
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOTA -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-10">
+        <div class="alert alert-light border">
+          <strong>Importante:</strong><br>
+          El perfil incluye alojamiento en LATIN NEXO.
+          En planes corporativos se puede utilizar <strong>dominio propio con renovación anual</strong>.
+          Los precios de accesorios no incluyen grandes volúmenes (consultar por cantidad).
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="py-5" id="como-funciona">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Cómo funciona</h2>
+        <p class="lead fw-normal text-muted mb-0">En 3 pasos lo tenés listo.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-chat-dots fs-4"></i></div>
+            <h3 class="h5 fw-bold">1) Nos pasás tu info</h3>
+            <p class="text-muted mb-0">Links, redes, textos, fotos, todo lo que quieras mostrar.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-brush fs-4"></i></div>
+            <h3 class="h5 fw-bold">2) Diseñamos tu perfil</h3>
+            <p class="text-muted mb-0">Lo armamos prolijo, rápido y con estética de tu marca.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-qr-code fs-4"></i></div>
+            <h3 class="h5 fw-bold">3) Te entregamos el link + QR/NFC</h3>
+            <p class="text-muted mb-0">Listo para compartir en redes, imprimir en tarjeta o usar en lanyard.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="py-5" id="contacto">
+    <div class="container px-5 my-5">
+      <aside class="bg-brand rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">¿Querés tu perfil con QR/NFC?</div>
+            <div class="muted">Contanos tu idea y te armamos una propuesta.</div>
+          </div>
+
+          <div class="ms-xl-4">
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20PERFIL%20digital%20con%20QR%2FNFC.%20Soy%3A">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+              </a>
+              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Perfiles%20QR%2FNFC">
+                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+      <div class="col-auto">
+        <div class="small m-0 text-white">
+          &copy; Lauro Ware 2026 <span id="year"></span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="link-light small" href="index.html#features">Servicios</a>
+        <span class="text-white mx-1">&middot;</span>
+        <a class="link-light small" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
