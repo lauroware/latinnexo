@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="LATIN NEXO: desarrollo web a medida. Plan estático con precio y plan con backend a cotizar. Incluye diseño UX/UI, responsive, hosting, dominio y correos." />
+  <meta name="author" content="LATIN NEXO" />
+  <title>LATIN NEXO — Desarrollo Web</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+    .feature-icon{
+      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+      border-radius: 14px;
+    }
+    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+    .text-brand{ color:#1EADD2 !important; }
+    .border-brand{ border-color:#1EADD2 !important; }
+    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+    .btn-brand:hover{ filter: brightness(1.05); }
+    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+    .muted{ color: rgba(255,255,255,.7); }
+
+    /* Cards LATIN NEXO */
+    .plan-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 22px;
+      height: 100%;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .plan-badge{
+      position:absolute; top:16px; right:16px;
+      font-size:.75rem;
+      padding:.35rem .6rem;
+      border-radius: 999px;
+      background: rgba(30,173,210,.12);
+      color:#0b6f87;
+      border:1px solid rgba(30,173,210,.25);
+      font-weight:700;
+    }
+    .plan-title{ margin: 10px 0 6px 0; }
+    .plan-muted{ color:#6c757d; }
+    .plan-price{
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color:#1EADD2;
+      margin: 10px 0 2px 0;
+    }
+    .plan-subprice{ font-size:.95rem; color:#6c757d; margin-bottom: 14px; }
+    .plan-list{ padding-left: 1.1rem; margin: 0; }
+    .plan-list li{ margin-bottom:.35rem; }
+
+    .note-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      background:#fff;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold">LATIN NEXO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20desarrollo%20web.%20Mi%20nombre%20es%3A">
+              Cotizar por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+          <div class="my-4 text-center text-lg-start">
+            <div class="hero-kicker text-white-50 mb-3">
+              Desarrollo web · UX/UI · Responsive · Hosting + Dominio
+            </div>
+
+            <h1 class="display-5 fw-bolder text-white mb-2">
+              Web profesional <span class="text-brand">lista para vender</span>.
+            </h1>
+
+            <p class="lead fw-normal text-white-50 mb-4">
+              Dos opciones: un sitio estático (ideal para presencia y ventas por WhatsApp) o un sitio con backend para proyectos con usuarios, panel y funcionalidades dinámicas.
+            </p>
+
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+              <a class="btn btn-brand btn-lg px-4" href="#planes">
+                Ver planes
+              </a>
+              <a class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20un%20sitio%20web.%20Mi%20rubro%20es%3A">
+                Hablar por WhatsApp
+              </a>
+            </div>
+
+            <div class="mt-4 text-white-50 small">
+              <i class="bi bi-phone me-2"></i>Mobile first ·
+              <i class="bi bi-lightning-charge mx-2"></i>Rápido ·
+              <i class="bi bi-shield-check mx-2"></i>Prolijo y seguro
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PLANES -->
+  <section class="py-5 bg-light" id="planes">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Planes de desarrollo web</h2>
+        <p class="lead fw-normal text-muted mb-0">
+          Elegí la opción que mejor se adapta a tu proyecto.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- PLAN ESTÁTICO -->
+        <div class="col-lg-6">
+          <div class="plan-card">
+            <span class="plan-badge">Más elegido</span>
+
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-window fs-4"></i>
+            </div>
+
+            <h3 class="fw-bold plan-title">Sitio Web Estático</h3>
+            <p class="plan-muted mb-0">
+              Ideal para emprendedores, profesionales y marcas que necesitan presencia online clara y prolija.
+            </p>
+
+            <div class="plan-price">ARS 180.000</div>
+            <div class="plan-subprice">Pago único · Incluye 1 año de hosting + dominio</div>
+
+            <ul class="plan-list text-muted">
+              <li>Diseño UX/UI personalizado</li>
+              <li>Responsive (mobile, tablet y desktop)</li>
+              <li>Hasta 5 secciones (Inicio, Servicios, Nosotros, Contacto, etc.)</li>
+              <li>Optimización de velocidad y performance</li>
+              <li>Formulario de contacto o botón WhatsApp</li>
+              <li>Hosting incluido (1 año)</li>
+              <li>Dominio .com.ar incluido (1 año)</li>
+              <li>2 correos corporativos</li>
+              <li>SEO básico (meta tags + estructura)</li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20plan%20Sitio%20Web%20Estático%20(ARS%20180.000).%20Mi%20nombre%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>Contratar este plan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAN BACKEND -->
+        <div class="col-lg-6">
+          <div class="plan-card border-brand">
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-diagram-3 fs-4"></i>
+            </div>
+
+            <h3 class="fw-bold plan-title">Sitio Web con Backend</h3>
+            <p class="plan-muted mb-0">
+              Para proyectos que necesitan lógica, datos, usuarios o funcionalidades dinámicas.
+            </p>
+
+            <div class="plan-price">A cotizar</div>
+            <div class="plan-subprice">Presupuesto según alcance y funcionalidades</div>
+
+            <ul class="plan-list text-muted">
+              <li>Todo lo incluido en el plan estático</li>
+              <li>Panel de administración</li>
+              <li>Gestión de contenidos o usuarios</li>
+              <li>Base de datos</li>
+              <li>Formularios avanzados</li>
+              <li>Integraciones (pagos, APIs, sistemas externos)</li>
+              <li>Roles y permisos</li>
+              <li>Deploy y configuración de servidor</li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20un%20sitio%20web%20con%20backend.%20Mi%20proyecto%20es%3A">
+                <i class="bi bi-chat-left-text me-2"></i>Cotizar proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Nota en estilo de card -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+          <div class="note-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="feature-icon bg-brand text-white">
+                <i class="bi bi-info-circle fs-4"></i>
+              </div>
+              <div>
+                <div class="fw-bold">Importante</div>
+                <div class="text-muted">
+                  El desarrollo es <strong>pago único</strong>. El hosting, dominio y correos se renuevan anualmente.
+                  Cambios futuros o mantenimiento extra se cotizan según necesidad.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact / CTA (igual que tu sitio) -->
+  <section class="py-5" id="contacto">
+    <div class="container px-5 my-5">
+      <aside class="bg-brand rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">¿Listo para crear tu web?</div>
+            <div class="muted">Contanos tu idea y te recomendamos el plan ideal.</div>
+          </div>
+
+          <div class="ms-xl-4">
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20desarrollo%20web.%20Mi%20nombre%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+              </a>
+              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Desarrollo%20Web">
+                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark py-4 mt-auto">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+      <div class="col-auto">
+        <div class="small m-0 text-white">
+          &copy; Lauro Ware 2026 <span id="year"></span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="link-light small" href="index.html#features">Servicios</a>
+        <span class="text-white mx-1">&middot;</span>
+        <a class="link-light small" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

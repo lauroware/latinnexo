@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="LATIN NEXO: Tags con QR. Un QR grabado abre una página pública con la info que decidas compartir. Privacidad y contacto rápido." />
+  <meta name="author" content="LATIN NEXO" />
+  <title>LATIN NEXO — Tags con QR</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+    .feature-icon{
+      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+      border-radius: 14px;
+    }
+    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+    .text-brand{ color:#1EADD2 !important; }
+    .border-brand{ border-color:#1EADD2 !important; }
+    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+    .btn-brand:hover{ filter: brightness(1.05); }
+    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+    .muted{ color: rgba(255,255,255,.7); }
+
+    /* Cards consistentes */
+    .step-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+      overflow: hidden;
+    }
+    .step-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .step-img{
+      width:100%;
+      max-width: 260px;
+      border-radius: 14px;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold">LATIN NEXO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20Tags%20con%20QR.%20Mi%20nombre%20es%3A">
+              Cotizar por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="my-4 text-center text-lg-start">
+            <div class="hero-kicker text-white-50 mb-3">
+              Tags inteligentes · QR grabado · Privacidad controlada
+            </div>
+
+            <h1 class="display-5 fw-bolder text-white mb-2">
+              Cómo funciona tu <span class="text-brand">Tag con QR</span>
+            </h1>
+
+            <p class="lead fw-normal text-white-50 mb-4">
+              Un QR grabado en tu chapita/llavero abre una página pública con la info que vos decidas compartir.
+              Ideal para llaves, valijas, mascotas o identificación.
+            </p>
+
+            <div class="row g-3 mt-3">
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-lightning-charge fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Contacto rápido</div>
+                    <div class="muted">Te llaman o escriben al toque.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-eye-slash fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Privacidad</div>
+                    <div class="muted">Mostrás solo lo necesario.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-shield-check fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">URL estable</div>
+                    <div class="muted">El QR siempre apunta al mismo lugar.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <a class="btn btn-brand btn-lg px-4" href="#pasos">
+                Ver pasos
+              </a>
+              <a class="btn btn-outline-light btn-lg px-4 ms-2" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20Tag%20con%20QR.%20Es%20para%3A">
+                Quiero uno
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PASOS -->
+  <section class="py-5 bg-light" id="pasos">
+    <div class="container px-5 my-5">
+
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Paso a paso</h2>
+        <p class="lead fw-normal text-muted mb-0">
+          Simple, rápido y pensado para que te contacten sin exponer de más.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Paso 1 -->
+        <div class="col-12">
+          <div class="step-card">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                  <img
+                    src="https://i.ibb.co/1GzmZ1HN/4ca75cbb-c795-4548-97b0-ab492d2054b2.png"
+                    alt="Un tag corresponde a un objeto o mascota"
+                    class="img-fluid step-img"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="feature-icon bg-brand text-white"><i class="bi bi-tag fs-4"></i></div>
+                    <h3 class="h5 fw-bold mb-0">1) Un Tag = un objeto, mascota o persona</h3>
+                  </div>
+                  <p class="text-muted mb-0">
+                    Cada Tag se asocia a un perfil. Podés colgarlo en una valija, collar, llavero o placa.
+                    Lo importante: el QR apunta a una URL estable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="col-12">
+          <div class="step-card">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                  <img
+                    src="https://i.ibb.co/4n3C9qHN/cd978b93-d1ec-4eae-9230-7fce2f1b9ae7.png"
+                    alt="Escaneá y cargá tu información"
+                    class="img-fluid step-img"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="feature-icon bg-brand text-white"><i class="bi bi-qr-code-scan fs-4"></i></div>
+                    <h3 class="h5 fw-bold mb-0">2) Primera vez: cargás tus datos</h3>
+                  </div>
+                  <p class="text-muted mb-0">
+                    Escaneás el QR con la cámara del celular y completás el perfil: nombre, foto, contacto y datos útiles
+                    (por ejemplo, alergias/medicación si es mascota).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="col-12">
+          <div class="step-card">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                  <img
+                    src="https://i.ibb.co/Tx52pmrQ/5f92ffeb-8053-48a2-9da8-16253789b716.png"
+                    alt="Se abre una página pública"
+                    class="img-fluid step-img"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="feature-icon bg-brand text-white"><i class="bi bi-globe2 fs-4"></i></div>
+                    <h3 class="h5 fw-bold mb-0">3) Se abre la página pública del Tag</h3>
+                  </div>
+                  <p class="text-muted mb-0">
+                    Cuando alguien escanea el QR, se abre una página pública con la información del Tag.
+                    La persona que encontró tu objeto/mascota puede contactarte al toque.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="col-12">
+          <div class="step-card">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                  <img
+                    src="https://i.ibb.co/XfGQfyhG/faaf51bf-1590-4bde-b911-04976d073226.png"
+                    alt="Privacidad controlada"
+                    class="img-fluid step-img"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <div class="feature-icon bg-brand text-white"><i class="bi bi-lock fs-4"></i></div>
+                    <h3 class="h5 fw-bold mb-0">4) Privacidad: vos decidís qué se muestra</h3>
+                  </div>
+                  <p class="text-muted mb-0">
+                    Mostrás solo lo necesario para que te devuelvan el objeto sin exponer de más.
+                    El objetivo es ayudarte y cuidarte.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="py-5" id="contacto">
+    <div class="container px-5 my-5">
+      <aside class="bg-brand rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">¿Querés tu Tag con QR?</div>
+            <div class="muted">Contanos para qué lo necesitás y te asesoramos.</div>
+          </div>
+
+          <div class="ms-xl-4">
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20Tag%20con%20QR.%20Es%20para%3A">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+              </a>
+              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Tags%20con%20QR">
+                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+      <div class="col-auto">
+        <div class="small m-0 text-white">
+          &copy; Lauro Ware 2026 <span id="year"></span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="link-light small" href="index.html#features">Servicios</a>
+        <span class="text-white mx-1">&middot;</span>
+        <a class="link-light small" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

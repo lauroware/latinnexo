@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="LATIN NEXO: Menú QR con diseño único. Opción QR estático sin mantenimiento mensual o plan mensual autogestionable con promo 2 meses al 50%." />
+  <meta name="author" content="LATIN NEXO" />
+  <title>LATIN NEXO — Menú QR</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+    .feature-icon{
+      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+      border-radius: 14px;
+    }
+    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+    .text-brand{ color:#1EADD2 !important; }
+    .border-brand{ border-color:#1EADD2 !important; }
+    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+    .btn-brand:hover{ filter: brightness(1.05); }
+    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+    .muted{ color: rgba(255,255,255,.7); }
+
+    .plan-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 22px;
+      height: 100%;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .plan-badge{
+      position:absolute; top:16px; right:16px;
+      font-size:.75rem; padding:.35rem .6rem; border-radius:999px;
+      background: rgba(30,173,210,.12);
+      color:#0b6f87;
+      border:1px solid rgba(30,173,210,.25);
+      font-weight:700;
+    }
+    .plan-price{
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color:#1EADD2;
+      margin: 10px 0 4px 0;
+    }
+    .plan-sub{ color:#6c757d; margin-bottom: 14px; }
+    .plan-list{ padding-left: 1.1rem; margin: 0; }
+    .plan-list li{ margin-bottom:.35rem; }
+
+    .note-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      background:#fff;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold">LATIN NEXO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A">
+              Cotizar por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="my-4 text-center text-lg-start">
+            <div class="hero-kicker text-white-50 mb-3">
+              Menú QR · Diseño único · Rápido y prolijo
+            </div>
+
+            <h1 class="display-5 fw-bolder text-white mb-2">
+              Tu <span class="text-brand">Menú QR</span> listo para usar.
+            </h1>
+
+            <p class="lead fw-normal text-white-50 mb-4">
+              Te armamos un menú digital con estética profesional y un QR que podés imprimir en mesas, vidrieras o delivery.
+              Podés elegir: <strong>QR estático sin mensualidad</strong> o <strong>plan mensual autogestionable</strong>.
+            </p>
+
+            <div class="row g-3 mt-3">
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-phone fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Mobile first</div>
+                    <div class="muted">Se lee perfecto en celular.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-stars fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">Diseño único</div>
+                    <div class="muted">Nada genérico, todo prolijo.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="feature-icon bg-brand text-white"><i class="bi bi-qr-code fs-4"></i></div>
+                  <div>
+                    <div class="text-white fw-bold">QR listo</div>
+                    <div class="muted">Lo imprimís y empezás.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <a class="btn btn-brand btn-lg px-4" href="#planes">Ver planes</a>
+              <a class="btn btn-outline-light btn-lg px-4 ms-2" href="#como-funciona">Cómo funciona</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PLANES -->
+  <section class="py-5 bg-light" id="planes">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Planes de Menú QR</h2>
+        <p class="lead fw-normal text-muted mb-0">Elegí el modelo que se adapta a tu forma de trabajar.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- QR ESTÁTICO -->
+        <div class="col-lg-6">
+          <div class="plan-card">
+            <span class="plan-badge">Sin mensualidad</span>
+
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-file-earmark-text fs-4"></i>
+            </div>
+
+            <h3 class="fw-bold mb-1">Menú QR Estático</h3>
+            <div class="text-muted mb-3">Un solo diseño, QR fijo, ideal si cambiás precios de vez en cuando.</div>
+
+            <div class="plan-price">$ 25.000</div>
+            <div class="plan-sub">Pago único · Actualizaciones opcionales</div>
+
+            <ul class="plan-list text-muted">
+              <li>Diseño único del menú (estética de tu marca)</li>
+              <li>Formato optimizado para celular</li>
+              <li>Link + QR listo para imprimir</li>
+              <li>Entrega rápida</li>
+              <li><strong>Actualización por cambio:</strong> $ 4.000 (precios/textos)</li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20MEN%C3%9A%20QR%20EST%C3%81TICO%20($%2025.000).%20Mi%20local%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>Quiero este plan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUTOGESTIONABLE MENSUAL -->
+        <div class="col-lg-6">
+          <div class="plan-card border-brand">
+            <span class="plan-badge">Autogestionable</span>
+
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-pencil-square fs-4"></i>
+            </div>
+
+            <h3 class="fw-bold mb-1">Menú QR Mensual (Autogestión)</h3>
+            <div class="text-muted mb-3">Para locales que actualizan seguido: promos, precios, productos y disponibilidad.</div>
+
+            <div class="plan-price">$ 25.000 / mes</div>
+            <div class="plan-sub"><strong>Promo:</strong> primeros 2 meses al 50% → $ 12.500 / mes</div>
+
+            <ul class="plan-list text-muted">
+              <li>Diseño único inicial</li>
+              <li>Acceso para autogestionar (cambios cuando quieras)</li>
+              <li>Actualizaciones ilimitadas mientras esté activo el plan</li>
+              <li>QR estable (no tenés que reimprimir)</li>
+              <li>Soporte básico incluido</li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20MEN%C3%9A%20QR%20MENSUAL%20AUTOGESTIONABLE%20($%2025.000%2Fmes%20-%20promo%202%20meses%2050%25).%20Mi%20local%20es%3A">
+                <i class="bi bi-chat-left-text me-2"></i>Quiero autogestión
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Nota -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-10">
+          <div class="note-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="feature-icon bg-brand text-white">
+                <i class="bi bi-info-circle fs-4"></i>
+              </div>
+              <div>
+                <div class="fw-bold">Aclaración</div>
+                <div class="text-muted">
+                  El QR es <strong>estático y de diseño único</strong>. En el plan estático, las actualizaciones se cobran por cambio.
+                  En el plan mensual, podés actualizar cuando quieras sin costo extra mientras el plan esté activo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="py-5" id="como-funciona">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Cómo funciona</h2>
+        <p class="lead fw-normal text-muted mb-0">En 3 pasos lo tenés andando.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="plan-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-chat-dots fs-4"></i></div>
+            <h3 class="h5 fw-bold">1) Nos mandás tu menú</h3>
+            <p class="text-muted mb-0">PDF, foto, Excel o texto. Lo ordenamos, codificamos y lo dejamos prolijo.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="plan-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-brush fs-4"></i></div>
+            <h3 class="h5 fw-bold">2) Diseñamos tu menú</h3>
+            <p class="text-muted mb-0">Un diseño único con estética de tu marca, listo para celular.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="plan-card">
+            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-qr-code fs-4"></i></div>
+            <h3 class="h5 fw-bold">3) Te entregamos el QR</h3>
+            <p class="text-muted mb-0">Te damos el link + QR para imprimir y empezar a usar. Tambien podemos dártelo impreso en nuestros tags en cualquiera de sus modalidades.</p>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="py-5" id="contacto">
+    <div class="container px-5 my-5">
+      <aside class="bg-brand rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">¿Querés tu Menú QR?</div>
+            <div class="muted">Contanos tu local y te recomendamos el plan ideal.</div>
+          </div>
+
+          <div class="ms-xl-4">
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+              </a>
+              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Men%C3%BA%20QR">
+                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+      <div class="col-auto">
+        <div class="small m-0 text-white">
+          &copy; Lauro Ware 2026 <span id="year"></span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="link-light small" href="index.html#features">Servicios</a>
+        <span class="text-white mx-1">&middot;</span>
+        <a class="link-light small" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
