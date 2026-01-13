@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="LATIN NEXO: perfiles con QR, invitaciones digitales, menú QR y desarrollo web a medida. Nosotros gestionamos cambios y mantenimiento para que siempre se vea profesional." />
+    <meta name="author" content="LATIN NEXO" />
+    <title>LATIN NEXO — Identidad digital con QR</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+      .feature-icon{
+        width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+        border-radius: 14px;
+      }
+      .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+      .text-brand{ color:#1EADD2 !important; }
+      .border-brand{ border-color:#1EADD2 !important; }
+      .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+      .btn-brand:hover{ filter: brightness(1.05); }
+      .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+      .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+      .muted{ color: rgba(255,255,255,.7); }
+
+      /* UX micro mejoras */
+      .service-card{
+        border: 1px solid rgba(0,0,0,.06);
+        border-radius: 18px;
+        padding: 22px;
+        height: 100%;
+        background: #fff;
+        transition: transform .15s ease, box-shadow .15s ease;
+      }
+      .service-card:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 10px 26px rgba(0,0,0,.08);
+      }
+      .service-title{ margin-bottom: 8px; }
+      .service-meta{ font-size: .95rem; }
+      .service-list{
+        padding-left: 1.1rem;
+        margin: .75rem 0 0 0;
+      }
+      .service-list li{ margin-bottom: .25rem; }
+    </style>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="fw-bold">LATIN NEXO</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+               <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
+        
+              <li class="nav-item ms-lg-3">
+                <a class="btn btn-brand btn-sm px-3" href="#contacto">
+                  Cotizar por WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ 
+
+<!-- HERO EVENTOS -->
+<!-- Branding & Diseño -->
+<section class="py-5 bg-light" id="branding">
+  <div class="container px-5 my-5">
+    <div class="row gx-5 align-items-start">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <h2 class="fw-bolder mb-2">Branding & Diseño</h2>
+        <p class="text-muted mb-0">
+          Si querés que tu marca se vea <strong>pro</strong> y consistente en todo (web, redes, piezas),
+          acá armamos la identidad completa: desde el logo hasta el sistema visual y la experiencia.
+        </p>
+
+        <div class="mt-4">
+          <a class="btn btn-outline-brand" href="#contacto">
+            <i class="bi bi-whatsapp me-2"></i>Pedir presupuesto
+          </a>
+        </div>
+
+        <div class="mt-3 small text-muted">
+          <i class="bi bi-check2-circle me-1"></i>Diseño consistente<br/>
+          <i class="bi bi-check2-circle me-1"></i>Listo para imprimir y digital<br/>
+          <i class="bi bi-check2-circle me-1"></i>Entrega ordenada en carpeta
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="row gx-4 gy-4 row-cols-1 row-cols-md-2">
+
+          <!-- Logo -->
+          <div class="col">
+            <div class="service-card">
+              <div class="feature-icon bg-brand text-white mb-3">
+                <i class="bi bi-stars fs-4"></i>
+              </div>
+              <h3 class="h5 service-title">Diseño de logo</h3>
+              <p class="service-meta text-muted mb-2">
+                Logo principal + versiones (horizontal / vertical / isotipo) listo para usar en cualquier formato.
+              </p>
+              <ul class="service-list text-muted">
+                <li>Entregas en SVG / PNG / PDF</li>
+                <li>Versiones claro/oscuro</li>
+                <li>Icono para redes</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Identidad + Manual -->
+          <div class="col">
+            <div class="service-card">
+              <div class="feature-icon bg-brand text-white mb-3">
+                <i class="bi bi-journal-text fs-4"></i>
+              </div>
+              <h3 class="h5 service-title">Manual de marca</h3>
+              <p class="service-meta text-muted mb-2">
+                Guía clara para que tu marca siempre se vea igual de bien (aunque la use otra persona).
+              </p>
+              <ul class="service-list text-muted">
+                <li>Paleta + tipografías</li>
+                <li>Usos correctos/incorrectos</li>
+                <li>Aplicaciones y ejemplos</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- UX/UI -->
+          <div class="col">
+            <div class="service-card">
+              <div class="feature-icon bg-brand text-white mb-3">
+                <i class="bi bi-layout-text-window-reverse fs-4"></i>
+              </div>
+              <h3 class="h5 service-title">Diseño UX/UI</h3>
+              <p class="service-meta text-muted mb-2">
+                Diseño de pantalla pensado para convertir: simple, rápido y lindo en celular.
+              </p>
+              <ul class="service-list text-muted">
+                <li>Wireframe + propuesta visual</li>
+                <li>Componentes / botones / cards</li>
+                <li>Optimización mobile-first</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Diseño gráfico -->
+          <div class="col">
+            <div class="service-card">
+              <div class="feature-icon bg-brand text-white mb-3">
+                <i class="bi bi-palette fs-4"></i>
+              </div>
+              <h3 class="h5 service-title">Diseño gráfico</h3>
+              <p class="service-meta text-muted mb-2">
+                Piezas para redes, flyers, tarjetas, presentaciones y lo que uses para vender.
+              </p>
+              <ul class="service-list text-muted">
+                <li>Templates para IG</li>
+                <li>Flyers / banners</li>
+                <li>Archivos listos para imprenta</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA mini -->
+        <div class="mt-4">
+          <div class="p-4 rounded-3 border" style="background:#fff;">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+              <div>
+                <div class="fw-bold">¿Querés que tu web y tu marca hablen el mismo idioma visual?</div>
+                <div class="text-muted">Te armamos el paquete ideal según tu etapa y presupuesto.</div>
+              </div>
+              <a class="btn btn-brand px-4" href="#contacto">
+                <i class="bi bi-chat-dots me-2"></i>Hablemos
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- Footer-->
+    <footer class="bg-dark py-4 mt-auto">
+      <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+          <div class="col-auto">
+            <div class="small m-0 text-white">
+               &copy; Lauro Ware 2026 <span id="year"></span>
+            </div>
+          </div>
+          <div class="col-auto">
+            <a class="link-light small" href="#faq">FAQ</a>
+            <span class="text-white mx-1">&middot;</span>
+            <a class="link-light small" href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
