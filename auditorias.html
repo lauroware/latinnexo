@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="LATIN NEXO: Auditorías digitales profesionales. Analizamos tu web, redes, campañas Meta Ads y SEO. Entregamos informe con plan de acción y mejoras concretas." />
+  <meta name="author" content="LATIN NEXO" />
+  <title>LATIN NEXO — Auditorías Digitales</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
+    .feature-icon{
+      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
+      border-radius: 14px;
+    }
+    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
+    .text-brand{ color:#1EADD2 !important; }
+    .border-brand{ border-color:#1EADD2 !important; }
+    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
+    .btn-brand:hover{ filter: brightness(1.05); }
+    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
+    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
+    .muted{ color: rgba(255,255,255,.7); }
+
+    /* Cards LATIN NEXO */
+    .plan-card{
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 22px;
+      height: 100%;
+      background: #fff;
+      transition: transform .15s ease, box-shadow .15s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .plan-badge{
+      position:absolute; top:16px; right:16px;
+      font-size:.75rem;
+      padding:.35rem .6rem;
+      border-radius: 999px;
+      background: rgba(30,173,210,.12);
+      color:#0b6f87;
+      border:1px solid rgba(30,173,210,.25);
+      font-weight:700;
+    }
+    .plan-title{ margin: 10px 0 6px 0; }
+    .plan-muted{ color:#6c757d; }
+    .plan-price{
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color:#1EADD2;
+      margin: 10px 0 2px 0;
+    }
+    .plan-subprice{ font-size:.95rem; color:#6c757d; margin-bottom: 14px; }
+    .plan-list{ padding-left: 1.1rem; margin: 0; }
+    .plan-list li{ margin-bottom:.35rem; }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+  <!-- Navigation (igual que en desarrollo web) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold">LATIN NEXO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
+               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20auditoría%20digital.%20Mi%20nombre%20es%3A">
+              Cotizar por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero específico para Auditorías -->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+          <div class="my-4 text-center text-lg-start">
+            <div class="hero-kicker text-white-50 mb-3">
+              Auditoría digital · SEO · Meta Ads · Negocio online
+            </div>
+
+            <h1 class="display-5 fw-bolder text-white mb-2">
+              Descubrí <span class="text-brand">cómo mejorar</span> tu presencia digital.
+            </h1>
+
+            <p class="lead fw-normal text-white-50 mb-4">
+              Analizamos tu web, redes sociales, campañas de anuncios y la competencia. Te entregamos un informe claro con errores detectados, mapa del embudo actual y un plan de acción concreto para convertir mejor.
+            </p>
+
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+              <a class="btn btn-brand btn-lg px-4" href="#planes">
+                Ver servicios
+              </a>
+              <a class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20auditoría%20para%20mi%20negocio.%20Mi%20rubro%20es%3A">
+                Hablar por WhatsApp
+              </a>
+            </div>
+
+            <div class="mt-4 text-white-50 small">
+              <i class="bi bi-graph-up me-2"></i>Informe ejecutivo ·
+              <i class="bi bi-binoculars mx-2"></i>Análisis de competencia ·
+              <i class="bi bi-lightbulb mx-2"></i>Plan de mejoras accionable
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE SERVICIOS / PLANES (tres tarjetas en paralelo) -->
+  <section class="py-5 bg-light" id="planes">
+    <div class="container px-5 my-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">Servicios de auditoría</h2>
+        <p class="lead fw-normal text-muted mb-0">
+          Elegí el diagnóstico que necesita tu negocio o contratá varios.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Auditoría de Negocios Digitales -->
+        <div class="col-lg-4 col-md-6">
+          <div class="plan-card">
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-bar-chart-steps fs-4"></i>
+            </div>
+            <h3 class="fw-bold plan-title">Auditoría de Negocios Digitales</h3>
+            <p class="plan-muted mb-0">
+              Análisis 360° de tu presencia online. Ideal para empresas que quieren entender dónde están fallando y cómo mejorar su conversión.
+            </p>
+            <div class="plan-price">A cotizar</div>
+            <div class="plan-subprice">Informe personalizado + plan de acción</div>
+            <ul class="plan-list text-muted">
+              <li>Análisis de web, redes sociales y oferta</li>
+              <li>Detección de incoherencias y errores críticos</li>
+              <li>Mapa del embudo de ventas actual</li>
+              <li>Comparativa con competencia directa</li>
+              <li>Plan de acción priorizado (qué cambiar primero)</li>
+              <li>Recomendaciones para mejorar conversión</li>
+            </ul>
+            <div class="mt-4">
+              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20DE%20NEGOCIOS%20DIGITALES.%20Mi%20web%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>Solicitar cotización
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Auditoría Meta Ads -->
+        <div class="col-lg-4 col-md-6">
+          <div class="plan-card">
+            <span class="plan-badge">Para anunciantes</span>
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-meta fs-4"></i>
+            </div>
+            <h3 class="fw-bold plan-title">Auditoría Meta Ads</h3>
+            <p class="plan-muted mb-0">
+              Revisamos tus campañas de Facebook e Instagram, segmentación, creatividades y rendimiento para que dejes de gastar dinero sin resultados.
+            </p>
+            <div class="plan-price">A cotizar</div>
+            <div class="plan-subprice">Según volumen de cuentas y campañas</div>
+            <ul class="plan-list text-muted">
+              <li>Estructura de campañas y conjuntos</li>
+              <li>Análisis de segmentación y públicos</li>
+              <li>Evaluación de creatividades (imagen/video/texto)</li>
+              <li>Detección de fugas de presupuesto</li>
+              <li>Recomendaciones para reducir costo por resultado</li>
+              <li>KPIs y métricas clave a seguir</li>
+            </ul>
+            <div class="mt-4">
+              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20META%20ADS.%20Mi%20cuenta%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>Solicitar cotización
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Auditoría SEO -->
+        <div class="col-lg-4 col-md-6">
+          <div class="plan-card border-brand">
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-graph-up fs-4"></i>
+            </div>
+            <h3 class="fw-bold plan-title">Auditoría SEO</h3>
+            <p class="plan-muted mb-0">
+              Analizamos tu sitio web y el de tu competencia. Te damos un plan para escalar posiciones en Google y aumentar el tráfico orgánico.
+            </p>
+            <div class="plan-price">A cotizar</div>
+            <div class="plan-subprice">SEO técnico + contenido + competencia</div>
+            <ul class="plan-list text-muted">
+              <li>Análisis técnico (velocidad, rastreo, indexación)</li>
+              <li>Revisión de keywords y posicionamiento actual</li>
+              <li>SEO on-page (etiquetas, estructura, contenido)</li>
+              <li>Auditoría de backlinks y perfil de enlaces</li>
+              <li>Benchmarking con competencia</li>
+              <li>Opcional: implementación de mejoras sobre tu código HTML</li>
+            </ul>
+            <div class="mt-4">
+              <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20SEO.%20Mi%20sitio%20es%3A">
+                <i class="bi bi-chat-left-text me-2"></i>Solicitar cotización
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nota aclaratoria sobre cómo trabajamos (opcional, como en menú QR) -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+          <div class="bg-white p-4 rounded-3 shadow-sm">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="feature-icon bg-brand text-white">
+                <i class="bi bi-info-circle fs-4"></i>
+              </div>
+              <div>
+                <div class="fw-bold mb-1">¿Cómo se entrega la auditoría?</div>
+                <div class="text-muted">
+                  Recibirás un informe ejecutivo en PDF con hallazgos, evidencias, prioridades y un plan de acción concreto.
+                  El análisis se realiza sobre información de acceso público (URLs, redes sociales abiertas, anuncios visibles)
+                  o con acceso de solo lectura que vos nos compartas. No almacenamos datos sensibles.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contacto (ancla #contacto) -->
+  <section id="contacto" class="py-5">
+    <div class="container px-5 my-5">
+      <aside class="bg-brand rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">¿Querés optimizar tu negocio digital?</div>
+            <div class="muted">Contanos qué auditoría necesitás y te enviamos un presupuesto sin cargo.</div>
+          </div>
+          <div class="ms-xl-4">
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20saber%20precios%20de%20auditoría.%20Mi%20nombre%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+              </a>
+              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=Auditoría%20digital%20-%20Consulta">
+                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer (idéntico al de desarrollo web, pero con el año actual y enlaces correctos) -->
+<footer class="bg-dark py-4 mt-auto">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+      <div class="col-auto">
+        <div class="small m-0 text-white">
+          &copy; LATIN NEXO 2026 <span id="year"></span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <a class="link-light small" href="index.html#features">Servicios</a>
+        <span class="text-white mx-1">&middot;</span>
+        <a class="link-light small" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

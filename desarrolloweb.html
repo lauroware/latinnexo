@@ -63,12 +63,6 @@
     .plan-subprice{ font-size:.95rem; color:#6c757d; margin-bottom: 14px; }
     .plan-list{ padding-left: 1.1rem; margin: 0; }
     .plan-list li{ margin-bottom:.35rem; }
-
-    .note-card{
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 18px;
-      background:#fff;
-    }
   </style>
 </head>
 
@@ -144,7 +138,7 @@
     </div>
   </header>
 
-  <!-- PLANES -->
+  <!-- PLANES (tres tarjetas en paralelo en desktop) -->
   <section class="py-5 bg-light" id="planes">
     <div class="container px-5 my-5">
       <div class="text-center mb-5">
@@ -155,24 +149,50 @@
       </div>
 
       <div class="row g-4">
-
-        <!-- PLAN ESTÁTICO -->
-        <div class="col-lg-6">
+        <!-- PLAN BÁSICO (antes "Personal") -->
+        <div class="col-lg-4 col-md-6">
           <div class="plan-card">
-            <span class="plan-badge">Más elegido</span>
-
             <div class="feature-icon bg-brand text-white mb-3">
               <i class="bi bi-window fs-4"></i>
             </div>
+            <h3 class="fw-bold plan-title">Sitio Web Básico</h3>
+            <p class="plan-muted mb-0">
+              Ideal para creadores de contenido que necesitan una presencia online simple, clara y profesional. Perfecto para mostrar información, portafolio o servicios con un diseño atractivo y funcional.
+            </p>
+            <div class="plan-price">ARS 38.000</div>
+            <div class="plan-subprice">Pago único · Incluye 1 año de hosting + dominio</div>
+            <ul class="plan-list text-muted">
+              <li>Responsive (mobile, tablet y desktop)</li>
+              <li>Optimización de velocidad y performance</li>
+              <li>Formulario de contacto o botón WhatsApp</li>
+              <li>Hosting incluido (1 año)</li>
+              <li>Dominio .com.ar incluido (1 año)</li>
+              <li>Correo @tudominio opcional</li>
+              <li>SEO básico (meta tags + estructura)</li>
+              <li>Analizamos tu red social, nos proporcionás colores y estilo, y creamos el sitio</li>
+            </ul>
+            <div class="mt-4">
+              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
+                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20plan%20Sitio%20Web%20Básico%20(ARS%2038.000).%20Mi%20nombre%20es%3A">
+                <i class="bi bi-whatsapp me-2"></i>Contratar este plan
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <!-- PLAN ESTÁTICO PROFESIONAL -->
+        <div class="col-lg-4 col-md-6">
+          <div class="plan-card">
+            <span class="plan-badge">Más elegido</span>
+            <div class="feature-icon bg-brand text-white mb-3">
+              <i class="bi bi-window-stack fs-4"></i>
+            </div>
             <h3 class="fw-bold plan-title">Sitio Web Estático</h3>
             <p class="plan-muted mb-0">
               Ideal para emprendedores, profesionales y marcas que necesitan presencia online clara y prolija.
             </p>
-
             <div class="plan-price">ARS 180.000</div>
             <div class="plan-subprice">Pago único · Incluye 1 año de hosting + dominio</div>
-
             <ul class="plan-list text-muted">
               <li>Diseño UX/UI personalizado</li>
               <li>Responsive (mobile, tablet y desktop)</li>
@@ -184,7 +204,6 @@
               <li>2 correos corporativos</li>
               <li>SEO básico (meta tags + estructura)</li>
             </ul>
-
             <div class="mt-4">
               <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
                  href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20plan%20Sitio%20Web%20Estático%20(ARS%20180.000).%20Mi%20nombre%20es%3A">
@@ -194,21 +213,18 @@
           </div>
         </div>
 
-        <!-- PLAN BACKEND -->
-        <div class="col-lg-6">
+        <!-- PLAN CON BACKEND -->
+        <div class="col-lg-4 col-md-6">
           <div class="plan-card border-brand">
             <div class="feature-icon bg-brand text-white mb-3">
               <i class="bi bi-diagram-3 fs-4"></i>
             </div>
-
             <h3 class="fw-bold plan-title">Sitio Web con Backend</h3>
             <p class="plan-muted mb-0">
               Para proyectos que necesitan lógica, datos, usuarios o funcionalidades dinámicas.
             </p>
-
             <div class="plan-price">A cotizar</div>
             <div class="plan-subprice">Presupuesto según alcance y funcionalidades</div>
-
             <ul class="plan-list text-muted">
               <li>Todo lo incluido en el plan estático</li>
               <li>Panel de administración</li>
@@ -219,7 +235,6 @@
               <li>Roles y permisos</li>
               <li>Deploy y configuración de servidor</li>
             </ul>
-
             <div class="mt-4">
               <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
                  href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20un%20sitio%20web%20con%20backend.%20Mi%20proyecto%20es%3A">
@@ -228,57 +243,14 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- Nota en estilo de card -->
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-10">
-          <div class="note-card p-4">
-            <div class="d-flex gap-3 align-items-start">
-              <div class="feature-icon bg-brand text-white">
-                <i class="bi bi-info-circle fs-4"></i>
-              </div>
-              <div>
-                <div class="fw-bold">Importante</div>
-                <div class="text-muted">
-                  El desarrollo es <strong>pago único</strong>. El hosting, dominio y correos se renuevan anualmente.
-                  Cambios futuros o mantenimiento extra se cotizan según necesidad.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Se eliminó la tarjeta de nota (la que decía "Importante") -->
 
     </div>
   </section>
 
-  <!-- Contact / CTA (igual que tu sitio) -->
-  <section class="py-5" id="contacto">
-    <div class="container px-5 my-5">
-      <aside class="bg-brand rounded-3 p-4 p-sm-5">
-        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-          <div class="mb-4 mb-xl-0">
-            <div class="fs-3 fw-bold text-white">¿Listo para crear tu web?</div>
-            <div class="muted">Contanos tu idea y te recomendamos el plan ideal.</div>
-          </div>
-
-          <div class="ms-xl-4">
-            <div class="d-grid gap-2 d-sm-flex">
-              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20desarrollo%20web.%20Mi%20nombre%20es%3A">
-                <i class="bi bi-whatsapp me-2"></i>WhatsApp
-              </a>
-              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Desarrollo%20Web">
-                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-              </a>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
+  
 
 </main>
 
