@@ -1,211 +1,493 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="LATIN NEXO: perfiles con QR, invitaciones digitales, menú QR y desarrollo web a medida. Nosotros gestionamos cambios y mantenimiento para que siempre se vea profesional." />
-    <meta name="author" content="LATIN NEXO" />
-    <title>LATIN NEXO — Identidad digital con QR</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+  <!-- SEO Primary -->
+  <title>LATIN NEXO — Quiénes somos</title>
+  <meta name="description" content="Conocé LATIN NEXO: presencia digital profesional con perfiles QR, invitaciones digitales, menú QR y desarrollo web. Diseño premium, soporte real y sin complicaciones." />
+  <meta name="keywords" content="sobre nosotros, agencia digital, perfiles QR, desarrollo web, invitaciones digitales, latin nexo" />
+  <meta name="author" content="LATIN NEXO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://latinnexo.com/about.html" />
 
-    <style>
-      .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
-      .feature-icon{
-        width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
-        border-radius: 14px;
-      }
-      .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
-      .text-brand{ color:#1EADD2 !important; }
-      .border-brand{ border-color:#1EADD2 !important; }
-      .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
-      .btn-brand:hover{ filter: brightness(1.05); }
-      .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
-      .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
-      .muted{ color: rgba(255,255,255,.7); }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LATIN NEXO — Quiénes somos" />
+  <meta property="og:description" content="Conocé nuestro equipo y nuestra forma de trabajar. Hacemos que tu identidad digital brille sin que tengas que preocuparte por ediciones o mantenimiento." />
+  <meta property="og:url" content="https://latinnexo.com/about.html" />
+  <meta property="og:image" content="https://latinnexo.com/assets/og-image.jpg" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="LATIN NEXO" />
 
-      /* UX micro mejoras */
-      .service-card{
-        border: 1px solid rgba(0,0,0,.06);
-        border-radius: 18px;
-        padding: 22px;
-        height: 100%;
-        background: #fff;
-        transition: transform .15s ease, box-shadow .15s ease;
-      }
-      .service-card:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 10px 26px rgba(0,0,0,.08);
-      }
-      .service-title{ margin-bottom: 8px; }
-      .service-meta{ font-size: .95rem; }
-      .service-list{
-        padding-left: 1.1rem;
-        margin: .75rem 0 0 0;
-      }
-      .service-list li{ margin-bottom: .25rem; }
-    </style>
-  </head>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LATIN NEXO — Quiénes somos" />
+  <meta name="twitter:description" content="Diseño premium, soporte real y resultados profesionales. Conocé más sobre nosotros." />
+  <meta name="twitter:image" content="https://latinnexo.com/assets/og-image.jpg" />
 
-  <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+  <!-- Schema.org (Organización) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LATIN NEXO",
+    "description": "Agencia de identidad digital: perfiles QR, invitaciones digitales, menú QR, desarrollo web y auditorías digitales.",
+    "url": "https://latinnexo.com",
+    "telephone": "+5491162366175",
+    "email": "contacto@latinnexo.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "AR", "addressRegion": "Buenos Aires" },
+    "sameAs": ["https://latinmerch.com.ar"]
+  }
+  </script>
 
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="fw-bold">LATIN NEXO</span>
-          </a>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <style>
+    /* ─── TOKENS (idénticos al base) ─── */
+    :root {
+      --c-bg:        #07080C;
+      --c-surface:   #0F1117;
+      --c-surface2:  #161820;
+      --c-border:    rgba(255,255,255,.07);
+      --c-text:      #E8EAF0;
+      --c-muted:     #B8BCC8;
+      --c-cyan:      #1EADD2;
+      --c-magenta:   #DC2F88;
+      --c-violet:    #9D3796;
+      --grad:        linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+      --radius:       16px;
+      --radius-sm:    10px;
+    }
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
-               <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
-        
-              <li class="nav-item ms-lg-3">
-                <a class="btn btn-brand btn-sm px-3" href="#contacto">
-                  Cotizar por WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
- 
-      <section class="py-5 bg-light">
-  <div class="container px-5 my-5">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-9">
-        <h1 class="fw-bolder mb-3">Nosotros</h1>
-        <p class="lead text-muted mb-4">
-          En <strong>LATIN NEXO</strong> creamos presencia digital profesional para personas, marcas y equipos.
-          Unificamos <strong>perfiles con QR</strong>, <strong>invitaciones digitales</strong>, <strong>menú QR</strong> y
-          <strong>desarrollo web a medida</strong> en soluciones simples, rápidas y bien diseñadas.
-        </p>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-4">
-            <p class="text-muted mb-3">
-              Nuestro diferencial es claro: <strong>vos no te ocupás de editar ni “mantener” nada</strong>.
-              Nosotros gestionamos los cambios, la actualización de contenido y el mantenimiento para que tu identidad digital
-              se vea siempre impecable.
-            </p>
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .5;
+    }
 
-            <div class="row g-3 mt-2">
-              <div class="col-md-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-phone fs-4"></i></div>
-                  <div>
-                    <div class="fw-bold">Mobile first</div>
-                    <div class="text-muted">Pensado para celular y carga rápida.</div>
-                  </div>
-                </div>
-              </div>
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--c-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--grad); border-radius: 9px; }
 
-              <div class="col-md-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-stars fs-4"></i></div>
-                  <div>
-                    <div class="fw-bold">Diseño premium</div>
-                    <div class="text-muted">Limpio, claro y profesional.</div>
-                  </div>
-                </div>
-              </div>
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-              <div class="col-md-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-lightning-charge fs-4"></i></div>
-                  <div>
-                    <div class="fw-bold">Performance</div>
-                    <div class="text-muted">Optimización y buenas prácticas.</div>
-                  </div>
-                </div>
-              </div>
+    .container { max-width: 1160px; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 3rem); }
 
-              <div class="col-md-6">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-tools fs-4"></i></div>
-                  <div>
-                    <div class="fw-bold">Soporte real</div>
-                    <div class="text-muted">Cambios y mejoras por WhatsApp.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    /* ─── NAVIGATION (igual al base) ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7,8,12,.85);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 2rem;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--c-text); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .55rem 1.35rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: filter .2s, transform .15s;
+    }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--grad);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--c-text);
+      border: 1px solid var(--c-border);
+    }
+    .btn-ghost:hover { background: var(--c-surface); }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--c-border); color: var(--c-text); padding: .4rem .6rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; }
+    @media(max-width:768px){
+      .nav-links { display: none; position: fixed; inset: 64px 0 0; background: var(--c-bg); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 200; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .nav-cta { display: none; }
+    }
 
-            <div class="mt-4">
-              <a class="btn btn-outline-brand ms-2" href="index.html#features">
-                Ver servicios
-              </a>
-            </div>
-          </div>
-        </div>
+    /* ─── SECTION HEADERS ─── */
+    section { padding: clamp(4rem, 8vw, 7rem) 0; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      margin-bottom: .75rem;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: .02em;
+      margin-bottom: 1rem;
+    }
 
+    /* ─── ABOUT CARD / CONTENT ─── */
+    .about-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      transition: border-color .2s;
+    }
+    .about-card p {
+      color: var(--c-muted);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .about-card p strong {
+      color: var(--c-text);
+      font-weight: 600;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin: 2rem 0 1rem;
+    }
+    .feature-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 2.8rem; height: 2.8rem;
+      border-radius: var(--radius-sm);
+      background: rgba(30,173,210,.1);
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--c-cyan);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .feature-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: .02em;
+      margin-bottom: .25rem;
+    }
+    .feature-text p {
+      font-size: .84rem;
+      margin-bottom: 0;
+      color: var(--c-muted);
+      font-weight: 300;
+    }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--grad);
+      padding: clamp(3.5rem, 7vw, 6rem) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 600 L0 0 L600 0 Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;
+      pointer-events: none;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: .02em;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cta-band p {
+      color: rgba(255,255,255,.8);
+      max-width: 540px;
+      margin-inline: auto;
+      margin-bottom: 2.25rem;
+      font-weight: 300;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--c-bg);
+      font-weight: 700;
+    }
+    .btn-white:hover { background: rgba(255,255,255,.92); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--c-surface);
+      border-top: 1px solid var(--c-border);
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--c-text); }
+    .footer-copy {
+      color: var(--c-muted);
+      font-size: .82rem;
+      font-family: var(--font-mono);
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media(max-width: 600px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .about-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV (idéntico al base, con enlaces corregidos) -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Latin Nexo – Inicio">LATIN NEXO</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="about.html" aria-current="page">Nosotros</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i> Cotizar
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
+  <main>
 
-      <!-- Contact / CTA -->
-      <section class="py-5" id="contacto">
-        <div class="container px-5 my-5">
-          <aside class="bg-brand rounded-3 p-4 p-sm-5">
-            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-              <div class="mb-4 mb-xl-0">
-                <div class="fs-3 fw-bold text-white">¿Listo para trabajar con nosotros?</div>
-                <div class="muted">Escribinos y te guiamos al servicio ideal.</div>
-              </div>
+    <!-- Sección Nosotros (reinterpretación del segundo código) -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row gx-5 justify-content-center">
+          <div class="col-lg-10">
+            <div class="reveal">
+              <span class="section-label">// Quiénes somos</span>
+              <h1 class="section-title" style="margin-bottom: 2rem;">DISEÑO Y <span class="grad-text">SOPORTE SIN COMPLICACIONES</span></h1>
+            </div>
 
-              <div class="ms-xl-4">
-                <div class="d-grid gap-2 d-sm-flex">
-                  <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
-                     href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A">
-                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
-                  </a>
-                  <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Consulta">
-                    <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-                  </a>
+            <div class="about-card reveal">
+              <p>
+                En <strong>LATIN NEXO</strong> creamos <strong>presencia digital profesional</strong> para personas, marcas y equipos.
+                Unificamos <strong>perfiles con QR</strong>, <strong>invitaciones digitales</strong>, <strong>menú QR</strong> y
+                <strong>desarrollo web a medida</strong> en soluciones simples, rápidas y bien diseñadas.
+              </p>
+
+              <p>
+                Nuestro diferencial es claro: <strong>vos no te ocupás de editar ni “mantener” nada</strong>.
+                Nosotros gestionamos los cambios, la actualización de contenido y el mantenimiento para que tu identidad digital
+                se vea siempre impecable.
+              </p>
+
+              <div class="feature-grid">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="bi bi-phone"></i></div>
+                  <div class="feature-text">
+                    <h4>Mobile first</h4>
+                    <p>Pensado para celular y carga rápida.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="bi bi-stars"></i></div>
+                  <div class="feature-text">
+                    <h4>Diseño premium</h4>
+                    <p>Limpio, claro y profesional.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                  <div class="feature-text">
+                    <h4>Performance</h4>
+                    <p>Optimización y buenas prácticas.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="bi bi-tools"></i></div>
+                  <div class="feature-text">
+                    <h4>Soporte real</h4>
+                    <p>Cambios y mejoras por WhatsApp.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </aside>
-        </div>
-      </section>
 
-    </main>
-
-    <!-- Footer-->
-    <footer class="bg-dark py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0 text-white">
-               &copy; Lauro Ware 2026 <span id="year"></span>
+              <div style="margin-top: 1.5rem;">
+                <a class="btn btn-primary" href="index.html#servicios">
+                  Ver servicios <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-auto">
-            <a class="link-light small" href="#faq">FAQ</a>
-            <span class="text-white mx-1">&middot;</span>
-            <a class="link-light small" href="#contacto">Contacto</a>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+    <!-- CTA BAND (contacto) -->
+    <section class="cta-band" id="contacto">
+      <div class="container">
+        <h2>HABLEMOS DE<br />TU PROYECTO</h2>
+        <p>Escríbenos por WhatsApp o e-mail. Estamos para ayudarte a potenciar tu marca digital.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-white" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp"></i> Cotizar por WhatsApp
+          </a>
+          <a class="btn" href="mailto:contacto@latinnexo.com" style="background: rgba(255,255,255,.15); color:#fff; border: 1px solid rgba(255,255,255,.3);">
+            <i class="bi bi-envelope"></i> contacto@latinnexo.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">LATIN NEXO</div>
+        <nav class="footer-links" aria-label="Links del pie de página">
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="about.html">Nosotros</a>
+          <a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <span class="footer-copy">&copy; LATIN NEXO 2026 <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+        navToggle.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', false);
+          navToggle.innerHTML = '<i class="bi bi-list"></i>';
+        });
+      });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.06) + 's';
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Año dinámico
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+  </script>
+
+</body>
 </html>

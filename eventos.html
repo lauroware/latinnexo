@@ -1,373 +1,768 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="LATIN NEXO: perfiles con QR, invitaciones digitales, menú QR y desarrollo web a medida. Nosotros gestionamos cambios y mantenimiento para que siempre se vea profesional." />
-    <meta name="author" content="LATIN NEXO" />
-    <title>LATIN NEXO — Identidad digital con QR</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+  <!-- SEO -->
+  <title>LATIN NEXO — Invitaciones Digitales para Eventos</title>
+  <meta name="description" content="Invitaciones digitales premium para cumpleaños, bodas, 15 años y eventos corporativos. Diseño a medida, RSVP, cuenta regresiva y mapa integrado. Compartí por WhatsApp." />
+  <meta name="keywords" content="invitaciones digitales, invitaciones online, RSVP, eventos, cumpleaños, boda, 15 años, invitación virtual" />
+  <meta name="author" content="LATIN NEXO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://latinnexo.com/eventos.html" />
 
-    <style>
-      .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
-      .feature-icon{
-        width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
-        border-radius: 14px;
-      }
-      .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
-      .text-brand{ color:#1EADD2 !important; }
-      .border-brand{ border-color:#1EADD2 !important; }
-      .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
-      .btn-brand:hover{ filter: brightness(1.05); }
-      .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
-      .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
-      .muted{ color: rgba(255,255,255,.7); }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LATIN NEXO — Invitaciones Digitales" />
+  <meta property="og:description" content="Invitaciones digitales con diseño único, ubicación, cuenta regresiva y RSVP. Sin estrés ni papel." />
+  <meta property="og:url" content="https://latinnexo.com/eventos.html" />
+  <meta property="og:image" content="https://latinnexo.com/assets/og-image.jpg" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="LATIN NEXO" />
 
-      /* UX micro mejoras */
-      .service-card{
-        border: 1px solid rgba(0,0,0,.06);
-        border-radius: 18px;
-        padding: 22px;
-        height: 100%;
-        background: #fff;
-        transition: transform .15s ease, box-shadow .15s ease;
-      }
-      .service-card:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 10px 26px rgba(0,0,0,.08);
-      }
-      .service-title{ margin-bottom: 8px; }
-      .service-meta{ font-size: .95rem; }
-      .service-list{
-        padding-left: 1.1rem;
-        margin: .75rem 0 0 0;
-      }
-      .service-list li{ margin-bottom: .25rem; }
-    </style>
-  </head>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LATIN NEXO — Invitaciones Digitales" />
+  <meta name="twitter:description" content="Invitaciones online con diseño a medida y todas las funcionalidades para tu evento." />
+  <meta name="twitter:image" content="https://latinnexo.com/assets/og-image.jpg" />
 
-  <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Invitaciones Digitales",
+    "description": "Creación de invitaciones digitales para eventos sociales y corporativos.",
+    "provider": { "@type": "Organization", "name": "LATIN NEXO", "url": "https://latinnexo.com" }
+  }
+  </script>
 
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="fw-bold">LATIN NEXO</span>
-          </a>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <style>
+    /* ─── TOKENS (mismo estilo que diseño principal) ─── */
+    :root {
+      --c-bg:        #07080C;
+      --c-surface:   #0F1117;
+      --c-surface2:  #161820;
+      --c-border:    rgba(255,255,255,.07);
+      --c-text:      #E8EAF0;
+      --c-muted:     #B8BCC8;
+      --c-cyan:      #1EADD2;
+      --c-magenta:   #DC2F88;
+      --c-violet:    #9D3796;
+      --grad:        linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+      --radius:       16px;
+      --radius-sm:    10px;
+    }
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
-               <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
-        
-              <li class="nav-item ms-lg-3">
-                <a class="btn btn-brand btn-sm px-3" href="#contacto">
-                  Cotizar por WhatsApp
-                </a>
-              </li>
-            </ul>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .5;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--c-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--grad); border-radius: 9px; }
+
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .container { max-width: 1160px; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 3rem); }
+
+    /* ─── NAVIGATION (idéntica al resto) ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7,8,12,.85);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 2rem;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--c-text); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .55rem 1.35rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: filter .2s, transform .15s;
+    }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--grad);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--c-text);
+      border: 1px solid var(--c-border);
+    }
+    .btn-ghost:hover { background: var(--c-surface); }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--c-border); color: var(--c-text); padding: .4rem .6rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; }
+    @media(max-width:768px){
+      .nav-links { display: none; position: fixed; inset: 64px 0 0; background: var(--c-bg); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 200; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .nav-cta { display: none; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(30,173,210,.18) 0%, transparent 70%);
+      top: -150px; left: -100px;
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(220,47,136,.12) 0%, transparent 70%);
+      bottom: -100px; right: -80px;
+      animation: drift 13s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(40px, 30px) scale(1.08); }
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 900px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      border: 1px solid rgba(30,173,210,.3);
+      background: rgba(30,173,210,.06);
+      padding: .35rem .85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: .95;
+      letter-spacing: .01em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--c-muted);
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .hero-features {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+    .hero-feature {
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .hero-feature-icon {
+      width: 3rem; height: 3rem;
+      border-radius: var(--radius-sm);
+      background: rgba(30,173,210,.1);
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--c-cyan);
+    }
+    .hero-feature-text {
+      text-align: left;
+    }
+    .hero-feature-text .title {
+      font-weight: 600;
+      color: var(--c-text);
+      font-size: .9rem;
+    }
+    .hero-feature-text .desc {
+      font-size: .75rem;
+      color: var(--c-muted);
+    }
+
+    /* ─── SECCIONES GENERALES ─── */
+    section { padding: clamp(4rem, 8vw, 7rem) 0; }
+    .section-dark-bg { background: var(--c-surface); }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      margin-bottom: .75rem;
+      display: inline-block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: .02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      color: var(--c-muted);
+      max-width: 550px;
+      margin-inline: auto 0;
+      font-weight: 300;
+    }
+
+    /* ─── TARJETAS DE SERVICIO / PLANES (estilo oscuro) ─── */
+    .service-card {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      height: 100%;
+      transition: border-color .25s, transform .2s, box-shadow .2s;
+    }
+    .service-card:hover {
+      border-color: rgba(30,173,210,.4);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.4);
+    }
+    .feature-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius-sm);
+      background: rgba(30,173,210,.12);
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--c-cyan);
+      margin-bottom: 1.25rem;
+    }
+    .plan-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--c-cyan);
+      margin: 0.75rem 0 0.25rem;
+    }
+    .badge-plan {
+      display: inline-block;
+      background: rgba(30,173,210,.15);
+      border: 1px solid rgba(30,173,210,.3);
+      color: var(--c-cyan);
+      font-size: .7rem;
+      padding: .3rem .8rem;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+    .service-list {
+      padding-left: 1.2rem;
+      margin: 1rem 0 0;
+      color: var(--c-muted);
+      font-size: .85rem;
+      font-weight: 300;
+    }
+    .service-list li {
+      margin-bottom: 0.4rem;
+    }
+    .btn-plan {
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* Nota */
+    .note-card {
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+
+    /* Pasos (cómo funciona) */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .step-card {
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .step-icon {
+      width: 56px; height: 56px;
+      background: var(--grad);
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--grad);
+      padding: clamp(3rem, 7vw, 5rem) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 600 L0 0 L600 0 Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;
+      pointer-events: none;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      letter-spacing: .02em;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cta-band p {
+      color: rgba(255,255,255,.8);
+      max-width: 520px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--c-bg);
+      font-weight: 700;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--c-surface);
+      border-top: 1px solid var(--c-border);
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--c-text); }
+    .footer-copy {
+      color: var(--c-muted);
+      font-size: .82rem;
+      font-family: var(--font-mono);
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .hero-features { flex-direction: column; align-items: center; gap: 1rem; }
+      .hero-feature { width: 100%; justify-content: center; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navegación -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Latin Nexo – Inicio">LATIN NEXO</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20invitaci%C3%B3n%20digital.%20Mi%20evento%20es%3A" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i> Cotizar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner reveal">
+          <div class="hero-kicker">
+            <i class="bi bi-envelope-paper"></i> Invitaciones digitales · RSVP · Google Maps
           </div>
-        </div>
-      </nav>
- 
-
-<!-- HERO EVENTOS -->
-<header class="bg-dark py-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center justify-content-center">
-      <div class="col-lg-10 col-xl-9">
-        <div class="my-4 text-center text-lg-start">
-          <div class="hero-kicker text-white-50 mb-3">
-            Invitaciones digitales · RSVP · Google Maps
-          </div>
-
-          <h1 class="display-5 fw-bolder text-white mb-2">
-            Invitaciones para eventos <span class="text-brand">sin estrés</span>.
+          <h1>
+            INVITACIONES PARA EVENTOS<br />
+            <span class="grad-text">SIN ESTRÉS</span>
           </h1>
-
-          <p class="lead fw-normal text-white-50 mb-4">
+          <p class="hero-sub">
             Creamos tu invitación digital con diseño premium, lista para compartir por WhatsApp.
             Ideal para cumpleaños, bodas, 15, eventos corporativos y lanzamientos.
           </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a class="btn btn-primary" href="#incluye-eventos">Qué incluye</a>
+            <a class="btn btn-ghost" href="#planes-eventos">Ver planes</a>
+          </div>
+          <div class="hero-features">
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-share"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">Compartible</div>
+                <div class="desc">Un link, listo para WhatsApp</div>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">Ubicación</div>
+                <div class="desc">Google Maps integrado</div>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-check2-square"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">Confirmación</div>
+                <div class="desc">RSVP simple y ordenado</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-          <div class="row g-3 mt-3">
-            <div class="col-md-4">
-              <div class="d-flex gap-3 align-items-start">
-                <div class="feature-icon bg-brand text-white"><i class="bi bi-share fs-4"></i></div>
+    <!-- Qué incluye -->
+    <section class="section-dark-bg" id="incluye-eventos">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom: 3rem;">
+          <span class="section-label">// Características</span>
+          <h2 class="section-title">QUÉ INCLUYE</h2>
+          <p class="section-sub">Todo lo necesario para un evento prolijo y con buena presencia.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-palette"></i></div>
+              <h3 class="h5 fw-bold">Diseño a medida</h3>
+              <p class="text-muted mb-0">Estética personalizada con tus fotos, colores y estilo.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
+              <h3 class="h5 fw-bold">Cuenta regresiva</h3>
+              <p class="text-muted mb-0">Un contador para que todos tengan la fecha presente.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h5 fw-bold">Ubicación + mapa</h3>
+              <p class="text-muted mb-0">Cómo llegar con Google Maps, directo desde el celular.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-check2-square"></i></div>
+              <h3 class="h5 fw-bold">Confirmación (RSVP)</h3>
+              <p class="text-muted mb-0">Formulario simple o confirmación por WhatsApp (según opción).</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-image"></i></div>
+              <h3 class="h5 fw-bold">Galería</h3>
+              <p class="text-muted mb-0">Fotos del cumpleañero/a o de la pareja (opcional).</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="feature-icon"><i class="bi bi-stars"></i></div>
+              <h3 class="h5 fw-bold">Detalles del evento</h3>
+              <p class="text-muted mb-0">Dress code, horario, info útil y recomendaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planes -->
+    <section id="planes-eventos">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom: 3rem;">
+          <span class="section-label">// Planes</span>
+          <h2 class="section-title">ELEGÍ EL PLAN PARA TU EVENTO</h2>
+          <p class="section-sub">Opciones claras, sin sorpresas.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Plan Estándar -->
+          <div class="col-lg-6 reveal">
+            <div class="service-card">
+              <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
                 <div>
-                  <div class="text-white fw-bold">Compartible</div>
-                  <div class="muted">Un link, listo para WhatsApp.</div>
+                  <h3 class="h4 fw-bold mb-1">Invitación Digital Estándar</h3>
+                  <p class="text-muted">La opción ideal para la mayoría de los eventos.</p>
                 </div>
+                <span class="badge-plan">Más elegido</span>
               </div>
+              <div class="plan-price">$ 25.000</div>
+              <div class="text-muted mb-3">Pago único · Link listo para compartir</div>
+              <ul class="service-list">
+                <li>Diseño a medida</li>
+                <li>Datos del evento + dress code</li>
+                <li>Ubicación con Google Maps</li>
+                <li>Cuenta regresiva</li>
+                <li>Botón de WhatsApp para confirmar</li>
+                <li>Alojamiento incluido</li>
+              </ul>
+              <a class="btn btn-primary btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20INVITACI%C3%93N%20DIGITAL%20EST%C3%81NDAR%20($25.000).%20Evento%3A" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>Quiero este plan
+              </a>
             </div>
-            <div class="col-md-4">
+          </div>
+
+          <!-- Plan Premium / Corporativo -->
+          <div class="col-lg-6 reveal">
+            <div class="service-card" style="border-color: rgba(30,173,210,.4);">
+              <h3 class="h4 fw-bold mb-1">Invitación Premium / Corporativa</h3>
+              <p class="text-muted mb-3">
+                Para eventos con más requerimientos: RSVP con formulario, lista de invitados, múltiples secciones o diseño especial.
+              </p>
+              <div class="plan-price">A cotizar</div>
+              <div class="text-muted mb-3">Presupuesto según alcance</div>
+              <ul class="service-list">
+                <li>Formulario RSVP (Google Forms o embebido)</li>
+                <li>Galería completa / múltiples páginas</li>
+                <li>Secciones extra (itinerario, mesas, sponsors)</li>
+                <li>Eventos corporativos / lanzamientos</li>
+                <li>Dominio propio anual (opcional)</li>
+              </ul>
+              <a class="btn btn-outline-plan btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20INVITACI%C3%93N%20PREMIUM%20/%20CORPORATIVA.%20Evento%3A" target="_blank">
+                <i class="bi bi-chat-left-text me-2"></i>Cotizar Premium
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cómo funciona (pasos) -->
+        <div class="text-center mt-5 reveal">
+          <span class="section-label">// Proceso</span>
+          <h3 class="section-title" style="font-size: 2rem;">CÓMO LO HACEMOS</h3>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-icon"><i class="bi bi-chat-dots"></i></div>
+              <h4 class="fw-bold mb-2">1) Nos pasás la info</h4>
+              <p class="text-muted small">Fecha, lugar, fotos, texto y estilo del evento.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon"><i class="bi bi-brush"></i></div>
+              <h4 class="fw-bold mb-2">2) Diseñamos y ajustamos</h4>
+              <p class="text-muted small">Te lo mostramos, corregimos y lo dejamos impecable.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon"><i class="bi bi-share"></i></div>
+              <h4 class="fw-bold mb-2">3) Te entregamos el link</h4>
+              <p class="text-muted small">Listo para compartir por WhatsApp y redes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nota -->
+        <div class="row justify-content-center mt-5 reveal">
+          <div class="col-lg-10">
+            <div class="note-card">
               <div class="d-flex gap-3 align-items-start">
-                <div class="feature-icon bg-brand text-white"><i class="bi bi-geo-alt fs-4"></i></div>
+                <div class="feature-icon" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-info-circle"></i></div>
                 <div>
-                  <div class="text-white fw-bold">Ubicación</div>
-                  <div class="muted">Google Maps integrado.</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="d-flex gap-3 align-items-start">
-                <div class="feature-icon bg-brand text-white"><i class="bi bi-check2-square fs-4"></i></div>
-                <div>
-                  <div class="text-white fw-bold">Confirmación</div>
-                  <div class="muted">RSVP simple y ordenado.</div>
+                  <div class="fw-bold mb-1">Nota:</div>
+                  <div class="text-muted" style="font-size: .9rem;">El alojamiento está incluido. Cambios posteriores se pueden realizar por soporte según necesidad.</div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="mt-4">
-            <a class="btn btn-brand btn-lg px-4" href="#incluye-eventos">Qué incluye</a>
-            <a class="btn btn-outline-light btn-lg px-4 ms-2" href="#planes-eventos">Ver planes</a>
-          </div>
-
         </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Band contacto -->
+    <section class="cta-band" id="contacto">
+      <div class="container">
+        <h2>¿LISTO PARA TU EVENTO?</h2>
+        <p>Escribinos y te guiamos al servicio ideal.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-white" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A" target="_blank">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a class="btn" href="mailto:contacto@latinnexo.com" style="background: rgba(255,255,255,.15); color:#fff; border: 1px solid rgba(255,255,255,.3);">
+            <i class="bi bi-envelope"></i> contacto@latinnexo.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">LATIN NEXO</div>
+        <nav class="footer-links" aria-label="Links del pie de página">
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="about.html">Nosotros</a>
+          <a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <span class="footer-copy">&copy; LATIN NEXO 2026 <span id="year"></span></span>
       </div>
     </div>
-  </div>
-</header>
+  </footer>
 
-<!-- QUÉ INCLUYE -->
-<section class="py-5 bg-light" id="incluye-eventos">
-  <div class="container px-5 my-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bolder">Qué incluye</h2>
-      <p class="lead fw-normal text-muted mb-0">
-        Todo lo necesario para un evento prolijo y con buena presencia.
-      </p>
-    </div>
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+        navToggle.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', false);
+          navToggle.innerHTML = '<i class="bi bi-list"></i>';
+        });
+      });
+    }
 
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-palette fs-4"></i></div>
-          <h3 class="h5 fw-bold">Diseño a medida</h3>
-          <p class="text-muted mb-0">Estética personalizada con tus fotos, colores y estilo.</p>
-        </div>
-      </div>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.05) + 's';
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-clock-history fs-4"></i></div>
-          <h3 class="h5 fw-bold">Cuenta regresiva</h3>
-          <p class="text-muted mb-0">Un contador para que todos tengan la fecha presente.</p>
-        </div>
-      </div>
+    // Año dinámico
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+  </script>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-geo-alt fs-4"></i></div>
-          <h3 class="h5 fw-bold">Ubicación + mapa</h3>
-          <p class="text-muted mb-0">Cómo llegar con Google Maps, directo desde el celular.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-check2-square fs-4"></i></div>
-          <h3 class="h5 fw-bold">Confirmación (RSVP)</h3>
-          <p class="text-muted mb-0">Formulario simple o confirmación por WhatsApp (según opción).</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-image fs-4"></i></div>
-          <h3 class="h5 fw-bold">Galería</h3>
-          <p class="text-muted mb-0">Fotos del cumpleañero/a o de la pareja (opcional).</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card">
-          <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-stars fs-4"></i></div>
-          <h3 class="h5 fw-bold">Detalles del evento</h3>
-          <p class="text-muted mb-0">Dress code, horario, info útil y recomendaciones.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PLANES EVENTOS -->
-<section class="py-5" id="planes-eventos">
-  <div class="container px-5 my-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bolder">Planes</h2>
-      <p class="lead text-muted mb-0">Elegí el plan según lo que necesites para tu evento.</p>
-    </div>
-
-    <div class="row g-4">
-
-      <!-- PLAN ESTÁNDAR -->
-      <div class="col-lg-6">
-        <div class="service-card">
-          <div class="d-flex align-items-start justify-content-between gap-3">
-            <div>
-              <h3 class="h5 fw-bold mb-1">Invitación Digital Estándar</h3>
-              <p class="text-muted mb-3">La opción ideal para la mayoría de los eventos.</p>
-            </div>
-            <span class="badge bg-light text-dark border">Más elegido</span>
-          </div>
-
-          <div class="fs-2 fw-bold text-brand mb-1">$ 25.000</div>
-          <div class="text-muted mb-3">Pago único · Link listo para compartir</div>
-
-          <ul class="service-list text-muted">
-            <li>Diseño a medida</li>
-            <li>Datos del evento + dress code</li>
-            <li>Ubicación con Google Maps</li>
-            <li>Cuenta regresiva</li>
-            <li>Botón de WhatsApp para confirmar</li>
-            <li>Alojamiento incluido</li>
-          </ul>
-
-          <div class="mt-4">
-            <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
-               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20INVITACI%C3%93N%20DIGITAL%20EST%C3%81NDAR%20($%2025.000).%20Evento%3A">
-              <i class="bi bi-whatsapp me-2"></i>Quiero este plan
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- PLAN PREMIUM / CORPORATIVO -->
-      <div class="col-lg-6">
-        <div class="service-card border-brand">
-          <h3 class="h5 fw-bold mb-1">Invitación Premium / Corporativa</h3>
-          <p class="text-muted mb-3">
-            Para eventos con más requerimientos: RSVP con formulario, lista de invitados, múltiples secciones o diseño especial.
-          </p>
-
-          <div class="fs-2 fw-bold text-brand mb-1">A cotizar</div>
-          <div class="text-muted mb-3">Presupuesto según alcance</div>
-
-          <ul class="service-list text-muted">
-            <li>Formulario RSVP (Google Forms o embebido)</li>
-            <li>Galería completa / múltiples páginas</li>
-            <li>Secciones extra (itinerario, mesas, sponsors)</li>
-            <li>Eventos corporativos / lanzamientos</li>
-            <li>Dominio propio anual (opcional)</li>
-          </ul>
-
-          <div class="mt-4">
-            <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
-               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20INVITACI%C3%93N%20PREMIUM%20/%20CORPORATIVA.%20Evento%3A">
-              <i class="bi bi-chat-left-text me-2"></i>Cotizar Premium
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CÓMO FUNCIONA -->
-    <div class="text-center mt-5">
-      <h3 class="fw-bold mb-3">Cómo lo hacemos</h3>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-chat-dots fs-4"></i></div>
-            <h4 class="h6 fw-bold">1) Nos pasás la info</h4>
-            <p class="text-muted mb-0">Fecha, lugar, fotos, texto y estilo del evento.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-brush fs-4"></i></div>
-            <h4 class="h6 fw-bold">2) Diseñamos y ajustamos</h4>
-            <p class="text-muted mb-0">Te lo mostramos, corregimos y lo dejamos impecable.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <div class="feature-icon bg-brand text-white mb-3"><i class="bi bi-share fs-4"></i></div>
-            <h4 class="h6 fw-bold">3) Te entregamos el link</h4>
-            <p class="text-muted mb-0">Listo para compartir por WhatsApp y redes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- NOTA -->
-<section class="pb-5">
-  <div class="container px-5">
-    <div class="alert alert-light border">
-      <strong>Nota:</strong> el alojamiento está incluido. Cambios posteriores se pueden realizar por soporte según necesidad.
-    </div>
-  </div>
-</section>
-
-
-      <!-- Contact / CTA -->
-      <section class="py-5" id="contacto">
-        <div class="container px-5 my-5">
-          <aside class="bg-brand rounded-3 p-4 p-sm-5">
-            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-              <div class="mb-4 mb-xl-0">
-                <div class="fs-3 fw-bold text-white">¿Listo para trabajar con nosotros?</div>
-                <div class="muted">Escribinos y te guiamos al servicio ideal.</div>
-              </div>
-
-              <div class="ms-xl-4">
-                <div class="d-grid gap-2 d-sm-flex">
-                  <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
-                     href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar.%20Mi%20nombre%20es%3A">
-                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
-                  </a>
-                  <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=LATIN%20NEXO%20-%20Consulta">
-                    <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-                  </a>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer-->
-    <footer class="bg-dark py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0 text-white">
-               &copy; Lauro Ware 2026 <span id="year"></span>
-            </div>
-          </div>
-          <div class="col-auto">
-            <a class="link-light small" href="#faq">FAQ</a>
-            <span class="text-white mx-1">&middot;</span>
-            <a class="link-light small" href="#contacto">Contacto</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>

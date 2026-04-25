@@ -2,315 +2,672 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="LATIN NEXO: Auditorías digitales profesionales. Analizamos tu web, redes, campañas Meta Ads y SEO. Entregamos informe con plan de acción y mejoras concretas." />
-  <meta name="author" content="LATIN NEXO" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
   <title>LATIN NEXO — Auditorías Digitales</title>
+  <meta name="description" content="Auditorías digitales profesionales: SEO, Meta Ads y negocios digitales. Analizamos tu presencia online y te entregamos un plan de acción concreto para mejorar conversión." />
+  <meta name="keywords" content="auditoría SEO, auditoría Meta Ads, auditoría de negocios digitales, análisis web, diagnóstico digital" />
+  <meta name="author" content="LATIN NEXO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://latinnexo.com/auditorias.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LATIN NEXO — Auditorías Digitales" />
+  <meta property="og:description" content="Diagnóstico completo de tu presencia online. SEO, Meta Ads o análisis 360° de negocio digital. Informe ejecutivo con plan de acción." />
+  <meta property="og:url" content="https://latinnexo.com/auditorias.html" />
+  <meta property="og:image" content="https://latinnexo.com/assets/og-image.jpg" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="LATIN NEXO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LATIN NEXO — Auditorías Digitales" />
+  <meta name="twitter:description" content="Auditorías SEO, Meta Ads y de negocios digitales. Informe con errores, oportunidades y plan de mejora." />
+  <meta name="twitter:image" content="https://latinnexo.com/assets/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Auditorías Digitales",
+    "description": "Servicios de auditoría SEO, Meta Ads y de negocios digitales para mejorar la presencia online.",
+    "provider": { "@type": "Organization", "name": "LATIN NEXO", "url": "https://latinnexo.com" }
+  }
+  </script>
 
   <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
 
   <style>
-    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
-    .feature-icon{
-      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
-      border-radius: 14px;
+    /* ─── TOKENS ─── */
+    :root {
+      --c-bg:        #07080C;
+      --c-surface:   #0F1117;
+      --c-surface2:  #161820;
+      --c-border:    rgba(255,255,255,.07);
+      --c-text:      #E8EAF0;
+      --c-muted:     #B8BCC8;
+      --c-cyan:      #1EADD2;
+      --c-magenta:   #DC2F88;
+      --c-violet:    #9D3796;
+      --grad:        linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+      --radius:       16px;
+      --radius-sm:    10px;
     }
-    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
-    .text-brand{ color:#1EADD2 !important; }
-    .border-brand{ border-color:#1EADD2 !important; }
-    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
-    .btn-brand:hover{ filter: brightness(1.05); }
-    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
-    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
-    .muted{ color: rgba(255,255,255,.7); }
 
-    /* Cards LATIN NEXO */
-    .plan-card{
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 18px;
-      padding: 22px;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .5;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--c-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--grad); border-radius: 9px; }
+
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .container { max-width: 1160px; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 3rem); }
+
+    /* ─── NAVIGATION ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7,8,12,.85);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 2rem;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--c-text); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .55rem 1.35rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: filter .2s, transform .15s;
+    }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--grad);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--c-text);
+      border: 1px solid var(--c-border);
+    }
+    .btn-ghost:hover { background: var(--c-surface); }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--c-border); color: var(--c-text); padding: .4rem .6rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; }
+    @media(max-width:768px){
+      .nav-links { display: none; position: fixed; inset: 64px 0 0; background: var(--c-bg); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 200; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .nav-cta { display: none; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(30,173,210,.18) 0%, transparent 70%);
+      top: -150px; left: -100px;
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(220,47,136,.12) 0%, transparent 70%);
+      bottom: -100px; right: -80px;
+      animation: drift 13s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(40px, 30px) scale(1.08); }
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      border: 1px solid rgba(30,173,210,.3);
+      background: rgba(30,173,210,.06);
+      padding: .35rem .85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: .95;
+      letter-spacing: .01em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--c-muted);
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .badge-item {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .82rem;
+      color: var(--c-muted);
+      font-family: var(--font-mono);
+    }
+    .badge-item i { color: var(--c-cyan); font-size: .9rem; }
+
+    /* ─── PLAN CARDS (estilo oscuro) ─── */
+    .plans-section {
+      background: var(--c-surface);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      margin-bottom: .75rem;
+      display: inline-block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: .02em;
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      color: var(--c-muted);
+      max-width: 550px;
+      margin-inline: auto;
+      font-weight: 300;
+    }
+
+    .plan-card {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 2rem;
       height: 100%;
-      background: #fff;
-      transition: transform .15s ease, box-shadow .15s ease;
+      transition: border-color .25s, transform .2s, box-shadow .2s;
       position: relative;
       overflow: hidden;
     }
-    .plan-card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    .plan-card:hover {
+      border-color: rgba(30,173,210,.4);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.4);
     }
-    .plan-badge{
-      position:absolute; top:16px; right:16px;
-      font-size:.75rem;
-      padding:.35rem .6rem;
-      border-radius: 999px;
+    .plan-badge {
+      position: absolute; top: 16px; right: 16px;
+      font-size: .7rem;
+      padding: .3rem .7rem;
+      border-radius: 100px;
+      background: rgba(30,173,210,.15);
+      color: var(--c-cyan);
+      border: 1px solid rgba(30,173,210,.3);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+    .plan-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius-sm);
       background: rgba(30,173,210,.12);
-      color:#0b6f87;
-      border:1px solid rgba(30,173,210,.25);
-      font-weight:700;
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--c-cyan);
+      margin-bottom: 1.25rem;
     }
-    .plan-title{ margin: 10px 0 6px 0; }
-    .plan-muted{ color:#6c757d; }
-    .plan-price{
-      font-size: 2rem;
-      font-weight: 900;
+    .plan-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: .03em;
+      margin-bottom: 0.5rem;
+    }
+    .plan-price {
+      font-size: 1.8rem;
+      font-weight: 800;
       line-height: 1.1;
-      color:#1EADD2;
-      margin: 10px 0 2px 0;
+      color: var(--c-cyan);
+      margin: 0.75rem 0 0.25rem;
     }
-    .plan-subprice{ font-size:.95rem; color:#6c757d; margin-bottom: 14px; }
-    .plan-list{ padding-left: 1.1rem; margin: 0; }
-    .plan-list li{ margin-bottom:.35rem; }
+    .plan-subprice {
+      font-size: .85rem;
+      color: var(--c-muted);
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+    }
+    .plan-list {
+      padding-left: 1.2rem;
+      margin: 1rem 0 0;
+      color: var(--c-muted);
+      font-size: .85rem;
+      font-weight: 300;
+    }
+    .plan-list li {
+      margin-bottom: 0.4rem;
+    }
+    .btn-plan {
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+    .btn-outline-plan {
+      background: transparent;
+      border: 1px solid var(--c-cyan);
+      color: var(--c-cyan);
+    }
+    .btn-outline-plan:hover {
+      background: var(--c-cyan);
+      color: var(--c-bg);
+    }
+
+    /* Nota */
+    .note-card {
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--grad);
+      padding: clamp(3rem, 7vw, 5rem) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 600 L0 0 L600 0 Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;
+      pointer-events: none;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      letter-spacing: .02em;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cta-band p {
+      color: rgba(255,255,255,.8);
+      max-width: 520px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--c-bg);
+      font-weight: 700;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--c-surface);
+      border-top: 1px solid var(--c-border);
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--c-text); }
+    .footer-copy {
+      color: var(--c-muted);
+      font-size: .82rem;
+      font-family: var(--font-mono);
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media(max-width: 768px) {
+      .plan-card { padding: 1.5rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
+<body>
 
-  <!-- Navigation (igual que en desarrollo web) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container px-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <span class="fw-bold">LATIN NEXO</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
-
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
-               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20auditoría%20digital.%20Mi%20nombre%20es%3A">
-              Cotizar por WhatsApp
-            </a>
-          </li>
+  <!-- Navegación -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Latin Nexo – Inicio">LATIN NEXO</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a></li>
         </ul>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20cotizar%20una%20auditoría%20digital.%20Mi%20nombre%20es%3A" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i> Cotizar
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Header / Hero específico para Auditorías -->
-  <header class="bg-dark py-5">
-    <div class="container px-5">
-      <div class="row gx-5 align-items-center justify-content-center">
-        <div class="col-lg-9 col-xl-8">
-          <div class="my-4 text-center text-lg-start">
-            <div class="hero-kicker text-white-50 mb-3">
-              Auditoría digital · SEO · Meta Ads · Negocio online
-            </div>
+  <main>
 
-            <h1 class="display-5 fw-bolder text-white mb-2">
-              Descubrí <span class="text-brand">cómo mejorar</span> tu presencia digital.
-            </h1>
-
-            <p class="lead fw-normal text-white-50 mb-4">
-              Analizamos tu web, redes sociales, campañas de anuncios y la competencia. Te entregamos un informe claro con errores detectados, mapa del embudo actual y un plan de acción concreto para convertir mejor.
-            </p>
-
-            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
-              <a class="btn btn-brand btn-lg px-4" href="#planes">
-                Ver servicios
-              </a>
-              <a class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20auditoría%20para%20mi%20negocio.%20Mi%20rubro%20es%3A">
-                Hablar por WhatsApp
-              </a>
-            </div>
-
-            <div class="mt-4 text-white-50 small">
-              <i class="bi bi-graph-up me-2"></i>Informe ejecutivo ·
-              <i class="bi bi-binoculars mx-2"></i>Análisis de competencia ·
-              <i class="bi bi-lightbulb mx-2"></i>Plan de mejoras accionable
-            </div>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner reveal">
+          <div class="hero-kicker">
+            <i class="bi bi-binoculars"></i> Auditoría digital · SEO · Meta Ads · Negocio online
+          </div>
+          <h1>
+            DESCUBRÍ <span class="grad-text">CÓMO MEJORAR</span><br />
+            TU PRESENCIA DIGITAL
+          </h1>
+          <p class="hero-sub">
+            Analizamos tu web, redes sociales, campañas de anuncios y la competencia. Te entregamos un informe claro con errores detectados, mapa del embudo actual y un plan de acción concreto para convertir mejor.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a class="btn btn-primary" href="#planes">Ver servicios</a>
+            <a class="btn btn-ghost" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20auditoría%20para%20mi%20negocio.%20Mi%20rubro%20es%3A" target="_blank">Hablar por WhatsApp</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge-item"><i class="bi bi-graph-up"></i> Informe ejecutivo</span>
+            <span class="badge-item"><i class="bi bi-binoculars"></i> Análisis de competencia</span>
+            <span class="badge-item"><i class="bi bi-lightbulb"></i> Plan de mejoras accionable</span>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- SECCIÓN DE SERVICIOS / PLANES (tres tarjetas en paralelo) -->
-  <section class="py-5 bg-light" id="planes">
-    <div class="container px-5 my-5">
-      <div class="text-center mb-5">
-        <h2 class="fw-bolder">Servicios de auditoría</h2>
-        <p class="lead fw-normal text-muted mb-0">
-          Elegí el diagnóstico que necesita tu negocio o contratá varios.
-        </p>
-      </div>
+    <!-- Servicios de Auditoría (3 cards) -->
+    <section class="plans-section" id="planes">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">// Servicios</span>
+          <h2 class="section-title">ELEGÍ EL DIAGNÓSTICO QUE<br /><span class="grad-text">NECESITA TU NEGOCIO</span></h2>
+          <p class="section-sub">Podés contratar uno o varios. Cada servicio es independiente.</p>
+        </div>
 
-      <div class="row g-4">
-        <!-- 1. Auditoría de Negocios Digitales -->
-        <div class="col-lg-4 col-md-6">
-          <div class="plan-card">
-            <div class="feature-icon bg-brand text-white mb-3">
-              <i class="bi bi-bar-chart-steps fs-4"></i>
-            </div>
-            <h3 class="fw-bold plan-title">Auditoría de Negocios Digitales</h3>
-            <p class="plan-muted mb-0">
-              Análisis 360° de tu presencia online. Ideal para empresas que quieren entender dónde están fallando y cómo mejorar su conversión.
-            </p>
-            <div class="plan-price">A cotizar</div>
-            <div class="plan-subprice">Informe personalizado + plan de acción</div>
-            <ul class="plan-list text-muted">
-              <li>Análisis de web, redes sociales y oferta</li>
-              <li>Detección de incoherencias y errores críticos</li>
-              <li>Mapa del embudo de ventas actual</li>
-              <li>Comparativa con competencia directa</li>
-              <li>Plan de acción priorizado (qué cambiar primero)</li>
-              <li>Recomendaciones para mejorar conversión</li>
-            </ul>
-            <div class="mt-4">
-              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20DE%20NEGOCIOS%20DIGITALES.%20Mi%20web%20es%3A">
+        <div class="row g-4">
+          <!-- Auditoría de Negocios Digitales -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="plan-card">
+              <div class="plan-icon"><i class="bi bi-bar-chart-steps"></i></div>
+              <h3 class="plan-title">Auditoría de Negocios Digitales</h3>
+              <p class="text-muted small mb-2" style="font-weight:300;">Análisis 360° de tu presencia online. Ideal para empresas que quieren entender dónde están fallando y cómo mejorar su conversión.</p>
+              <div class="plan-price">A cotizar</div>
+              <div class="plan-subprice">Informe personalizado + plan de acción</div>
+              <ul class="plan-list">
+                <li>Análisis de web, redes sociales y oferta</li>
+                <li>Detección de incoherencias y errores críticos</li>
+                <li>Mapa del embudo de ventas actual</li>
+                <li>Comparativa con competencia directa</li>
+                <li>Plan de acción priorizado (qué cambiar primero)</li>
+                <li>Recomendaciones para mejorar conversión</li>
+              </ul>
+              <a class="btn btn-primary btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20DE%20NEGOCIOS%20DIGITALES.%20Mi%20web%20es%3A" target="_blank">
                 <i class="bi bi-whatsapp me-2"></i>Solicitar cotización
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- 2. Auditoría Meta Ads -->
-        <div class="col-lg-4 col-md-6">
-          <div class="plan-card">
-            <span class="plan-badge">Para anunciantes</span>
-            <div class="feature-icon bg-brand text-white mb-3">
-              <i class="bi bi-meta fs-4"></i>
-            </div>
-            <h3 class="fw-bold plan-title">Auditoría Meta Ads</h3>
-            <p class="plan-muted mb-0">
-              Revisamos tus campañas de Facebook e Instagram, segmentación, creatividades y rendimiento para que dejes de gastar dinero sin resultados.
-            </p>
-            <div class="plan-price">A cotizar</div>
-            <div class="plan-subprice">Según volumen de cuentas y campañas</div>
-            <ul class="plan-list text-muted">
-              <li>Estructura de campañas y conjuntos</li>
-              <li>Análisis de segmentación y públicos</li>
-              <li>Evaluación de creatividades (imagen/video/texto)</li>
-              <li>Detección de fugas de presupuesto</li>
-              <li>Recomendaciones para reducir costo por resultado</li>
-              <li>KPIs y métricas clave a seguir</li>
-            </ul>
-            <div class="mt-4">
-              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20META%20ADS.%20Mi%20cuenta%20es%3A">
+          <!-- Auditoría Meta Ads -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="plan-card">
+              <span class="plan-badge">Para anunciantes</span>
+              <div class="plan-icon"><i class="bi bi-meta"></i></div>
+              <h3 class="plan-title">Auditoría Meta Ads</h3>
+              <p class="text-muted small mb-2" style="font-weight:300;">Revisamos tus campañas de Facebook e Instagram, segmentación, creatividades y rendimiento para que dejes de gastar dinero sin resultados.</p>
+              <div class="plan-price">A cotizar</div>
+              <div class="plan-subprice">Según volumen de cuentas y campañas</div>
+              <ul class="plan-list">
+                <li>Estructura de campañas y conjuntos</li>
+                <li>Análisis de segmentación y públicos</li>
+                <li>Evaluación de creatividades (imagen/video/texto)</li>
+                <li>Detección de fugas de presupuesto</li>
+                <li>Recomendaciones para reducir costo por resultado</li>
+                <li>KPIs y métricas clave a seguir</li>
+              </ul>
+              <a class="btn btn-primary btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20META%20ADS.%20Mi%20cuenta%20es%3A" target="_blank">
                 <i class="bi bi-whatsapp me-2"></i>Solicitar cotización
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- 3. Auditoría SEO -->
-        <div class="col-lg-4 col-md-6">
-          <div class="plan-card border-brand">
-            <div class="feature-icon bg-brand text-white mb-3">
-              <i class="bi bi-graph-up fs-4"></i>
-            </div>
-            <h3 class="fw-bold plan-title">Auditoría SEO</h3>
-            <p class="plan-muted mb-0">
-              Analizamos tu sitio web y el de tu competencia. Te damos un plan para escalar posiciones en Google y aumentar el tráfico orgánico.
-            </p>
-            <div class="plan-price">A cotizar</div>
-            <div class="plan-subprice">SEO técnico + contenido + competencia</div>
-            <ul class="plan-list text-muted">
-              <li>Análisis técnico (velocidad, rastreo, indexación)</li>
-              <li>Revisión de keywords y posicionamiento actual</li>
-              <li>SEO on-page (etiquetas, estructura, contenido)</li>
-              <li>Auditoría de backlinks y perfil de enlaces</li>
-              <li>Benchmarking con competencia</li>
-              <li>Opcional: implementación de mejoras sobre tu código HTML</li>
-            </ul>
-            <div class="mt-4">
-              <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20SEO.%20Mi%20sitio%20es%3A">
+          <!-- Auditoría SEO -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="plan-card" style="border-color: rgba(30,173,210,.4);">
+              <div class="plan-icon"><i class="bi bi-graph-up"></i></div>
+              <h3 class="plan-title">Auditoría SEO</h3>
+              <p class="text-muted small mb-2" style="font-weight:300;">Analizamos tu sitio web y el de tu competencia. Te damos un plan para escalar posiciones en Google y aumentar el tráfico orgánico.</p>
+              <div class="plan-price">A cotizar</div>
+              <div class="plan-subprice">SEO técnico + contenido + competencia</div>
+              <ul class="plan-list">
+                <li>Análisis técnico (velocidad, rastreo, indexación)</li>
+                <li>Revisión de keywords y posicionamiento actual</li>
+                <li>SEO on-page (etiquetas, estructura, contenido)</li>
+                <li>Auditoría de backlinks y perfil de enlaces</li>
+                <li>Benchmarking con competencia</li>
+                <li>Opcional: implementación de mejoras sobre tu código HTML</li>
+              </ul>
+              <a class="btn btn-outline-plan btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20una%20AUDITORÍA%20SEO.%20Mi%20sitio%20es%3A" target="_blank">
                 <i class="bi bi-chat-left-text me-2"></i>Solicitar cotización
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Nota aclaratoria sobre cómo trabajamos (opcional, como en menú QR) -->
-      <div class="row justify-content-center mt-5">
-        <div class="col-lg-10">
-          <div class="bg-white p-4 rounded-3 shadow-sm">
-            <div class="d-flex gap-3 align-items-start">
-              <div class="feature-icon bg-brand text-white">
-                <i class="bi bi-info-circle fs-4"></i>
-              </div>
-              <div>
-                <div class="fw-bold mb-1">¿Cómo se entrega la auditoría?</div>
-                <div class="text-muted">
-                  Recibirás un informe ejecutivo en PDF con hallazgos, evidencias, prioridades y un plan de acción concreto.
-                  El análisis se realiza sobre información de acceso público (URLs, redes sociales abiertas, anuncios visibles)
-                  o con acceso de solo lectura que vos nos compartas. No almacenamos datos sensibles.
+        <!-- Nota aclaratoria -->
+        <div class="row justify-content-center mt-5 reveal">
+          <div class="col-lg-10">
+            <div class="note-card">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="plan-icon" style="width: 44px; height: 44px; flex-shrink: 0;"><i class="bi bi-info-circle"></i></div>
+                <div>
+                  <div class="fw-bold mb-1">¿Cómo se entrega la auditoría?</div>
+                  <div class="text-muted" style="font-size: .9rem;">
+                    Recibirás un informe ejecutivo en PDF con hallazgos, evidencias, prioridades y un plan de acción concreto.
+                    El análisis se realiza sobre información de acceso público (URLs, redes sociales abiertas, anuncios visibles)
+                    o con acceso de solo lectura que vos nos compartas. No almacenamos datos sensibles.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sección de contacto (ancla #contacto) -->
-  <section id="contacto" class="py-5">
-    <div class="container px-5 my-5">
-      <aside class="bg-brand rounded-3 p-4 p-sm-5">
-        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-          <div class="mb-4 mb-xl-0">
-            <div class="fs-3 fw-bold text-white">¿Querés optimizar tu negocio digital?</div>
-            <div class="muted">Contanos qué auditoría necesitás y te enviamos un presupuesto sin cargo.</div>
-          </div>
-          <div class="ms-xl-4">
-            <div class="d-grid gap-2 d-sm-flex">
-              <a class="btn btn-light px-4" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20saber%20precios%20de%20auditoría.%20Mi%20nombre%20es%3A">
-                <i class="bi bi-whatsapp me-2"></i>WhatsApp
-              </a>
-              <a class="btn btn-outline-light px-4" href="mailto:info@latinnexo.com.ar?subject=Auditoría%20digital%20-%20Consulta">
-                <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-              </a>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-</main>
-
-<!-- Footer (idéntico al de desarrollo web, pero con el año actual y enlaces correctos) -->
-<footer class="bg-dark py-4 mt-auto">
-  <div class="container px-5">
-    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-      <div class="col-auto">
-        <div class="small m-0 text-white">
-          &copy; LATIN NEXO 2026 <span id="year"></span>
+    <!-- CTA Band (contacto) -->
+    <section class="cta-band" id="contacto">
+      <div class="container">
+        <h2>¿QUERÉS OPTIMIZAR<br />TU NEGOCIO DIGITAL?</h2>
+        <p>Contanos qué auditoría necesitás y te enviamos un presupuesto sin cargo.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-white" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20saber%20precios%20de%20auditoría.%20Mi%20nombre%20es%3A" target="_blank">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a class="btn" href="mailto:contacto@latinnexo.com" style="background: rgba(255,255,255,.15); color:#fff; border: 1px solid rgba(255,255,255,.3);">
+            <i class="bi bi-envelope"></i> contacto@latinnexo.com
+          </a>
         </div>
       </div>
-      <div class="col-auto">
-        <a class="link-light small" href="index.html#features">Servicios</a>
-        <span class="text-white mx-1">&middot;</span>
-        <a class="link-light small" href="#contacto">Contacto</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">LATIN NEXO</div>
+        <nav class="footer-links" aria-label="Links del pie de página">
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="about.html">Nosotros</a>
+          <a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <span class="footer-copy">&copy; LATIN NEXO 2026 <span id="year"></span></span>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+        navToggle.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', false);
+          navToggle.innerHTML = '<i class="bi bi-list"></i>';
+        });
+      });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.05) + 's';
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Año dinámico
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+  </script>
 
 </body>
 </html>

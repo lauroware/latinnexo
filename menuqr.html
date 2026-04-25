@@ -2,348 +2,773 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="LATIN NEXO: Menú QR profesional. Elige QR estático sin cuota mensual o plan autogestionable. Diseño único, mobile first, soporte y opción de fabricación impresa." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>LATIN NEXO — Menú QR para Restaurantes</title>
+  <meta name="description" content="Menú QR profesional para restaurantes, bares y cafeterías. Plan estático sin mensualidad o plan autogestionable. Diseño único, mobile first y opción de impresión en 3D o láser." />
+  <meta name="keywords" content="menú QR, menú digital, QR para restaurantes, menú sin contacto, menú autogestionable" />
   <meta name="author" content="LATIN NEXO" />
-  <title>LATIN NEXO — Menú QR</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://latinnexo.com/menuqr.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LATIN NEXO — Menú QR" />
+  <meta property="og:description" content="Menú QR digital con diseño único. Elegí QR estático sin cuota mensual o plan autogestionable. Incluye soporte y opción de impresión física." />
+  <meta property="og:url" content="https://latinnexo.com/menuqr.html" />
+  <meta property="og:image" content="https://latinnexo.com/assets/og-image.jpg" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="LATIN NEXO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LATIN NEXO — Menú QR" />
+  <meta name="twitter:description" content="Menú digital con QR para tu negocio gastronómico. Fácil, rápido y profesional." />
+  <meta name="twitter:image" content="https://latinnexo.com/assets/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Menú QR LATIN NEXO",
+    "description": "Servicio de menú digital con código QR para restaurantes y bares.",
+    "brand": { "@type": "Brand", "name": "LATIN NEXO" },
+    "offers": [
+      { "@type": "Offer", "name": "Menú QR Estático", "price": "45000", "priceCurrency": "ARS" },
+      { "@type": "Offer", "name": "Menú QR Mensual", "price": "15000", "priceCurrency": "ARS", "priceValidUntil": "2026-12-31" }
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
 
   <style>
-    .hero-kicker{ letter-spacing: .12em; text-transform: uppercase; font-size:.85rem; }
-    .feature-icon{
-      width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;
-      border-radius: 14px;
+    /* ─── TOKENS (mismo estilo que diseño principal) ─── */
+    :root {
+      --c-bg:        #07080C;
+      --c-surface:   #0F1117;
+      --c-surface2:  #161820;
+      --c-border:    rgba(255,255,255,.07);
+      --c-text:      #E8EAF0;
+      --c-muted:     #B8BCC8;
+      --c-cyan:      #1EADD2;
+      --c-magenta:   #DC2F88;
+      --c-violet:    #9D3796;
+      --grad:        linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+      --radius:       16px;
+      --radius-sm:    10px;
     }
-    .bg-brand{ background: linear-gradient(135deg, #1EADD2 0%, #9D3796 55%, #DC2F88 100%) !important; }
-    .text-brand{ color:#1EADD2 !important; }
-    .border-brand{ border-color:#1EADD2 !important; }
-    .btn-brand{ background:#1EADD2; border-color:#1EADD2; }
-    .btn-brand:hover{ filter: brightness(1.05); }
-    .btn-outline-brand{ color:#1EADD2; border-color:#1EADD2; }
-    .btn-outline-brand:hover{ background:#1EADD2; color:#fff; }
-    .muted{ color: rgba(255,255,255,.7); }
 
-    .plan-card{
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 18px;
-      padding: 22px;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .5;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--c-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--grad); border-radius: 9px; }
+
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .container { max-width: 1160px; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 3rem); }
+
+    /* ─── NAVIGATION ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7,8,12,.85);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 2rem;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--c-text); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .55rem 1.35rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: filter .2s, transform .15s;
+    }
+    .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--grad);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--c-text);
+      border: 1px solid var(--c-border);
+    }
+    .btn-ghost:hover { background: var(--c-surface); }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--c-border); color: var(--c-text); padding: .4rem .6rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; }
+    @media(max-width:768px){
+      .nav-links { display: none; position: fixed; inset: 64px 0 0; background: var(--c-bg); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 200; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .nav-cta { display: none; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(30,173,210,.18) 0%, transparent 70%);
+      top: -150px; left: -100px;
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(220,47,136,.12) 0%, transparent 70%);
+      bottom: -100px; right: -80px;
+      animation: drift 13s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(40px, 30px) scale(1.08); }
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      border: 1px solid rgba(30,173,210,.3);
+      background: rgba(30,173,210,.06);
+      padding: .35rem .85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: .95;
+      letter-spacing: .01em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--c-muted);
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .hero-features {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+    .hero-feature {
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .hero-feature-icon {
+      width: 3rem; height: 3rem;
+      border-radius: var(--radius-sm);
+      background: rgba(30,173,210,.1);
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--c-cyan);
+    }
+    .hero-feature-text {
+      text-align: left;
+    }
+    .hero-feature-text .title {
+      font-weight: 600;
+      color: var(--c-text);
+      font-size: .9rem;
+    }
+    .hero-feature-text .desc {
+      font-size: .75rem;
+      color: var(--c-muted);
+    }
+
+    /* ─── SECCIONES GENERALES ─── */
+    section { padding: clamp(4rem, 8vw, 7rem) 0; }
+    .section-dark-bg { background: var(--c-surface); }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-cyan);
+      margin-bottom: .75rem;
+      display: inline-block;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      letter-spacing: .02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      color: var(--c-muted);
+      max-width: 550px;
+      margin-inline: auto 0;
+      font-weight: 300;
+    }
+
+    /* ─── PLAN CARDS (estilo oscuro) ─── */
+    .plan-card {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 2rem;
       height: 100%;
-      background: #fff;
-      transition: transform .15s ease, box-shadow .15s ease;
+      transition: border-color .25s, transform .2s, box-shadow .2s;
       position: relative;
       overflow: hidden;
     }
-    .plan-card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    .plan-card:hover {
+      border-color: rgba(30,173,210,.4);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.4);
     }
-    .plan-badge{
-      position:absolute; top:16px; right:16px;
-      font-size:.75rem; padding:.35rem .6rem; border-radius:999px;
+    .plan-badge {
+      position: absolute; top: 16px; right: 16px;
+      font-size: .7rem;
+      padding: .3rem .7rem;
+      border-radius: 100px;
+      background: rgba(30,173,210,.15);
+      color: var(--c-cyan);
+      border: 1px solid rgba(30,173,210,.3);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+    .plan-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius-sm);
       background: rgba(30,173,210,.12);
-      color:#0b6f87;
-      border:1px solid rgba(30,173,210,.25);
-      font-weight:700;
+      border: 1px solid rgba(30,173,210,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--c-cyan);
+      margin-bottom: 1.25rem;
     }
-    .plan-price{
+    .plan-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: .03em;
+      margin-bottom: 0.5rem;
+    }
+    .plan-price {
       font-size: 2rem;
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1.1;
-      color:#1EADD2;
-      margin: 10px 0 4px 0;
+      color: var(--c-cyan);
+      margin: 0.75rem 0 0.25rem;
     }
-    .plan-sub{ color:#6c757d; margin-bottom: 14px; }
-    .plan-list{ padding-left: 1.1rem; margin: 0; }
-    .plan-list li{ margin-bottom:.35rem; }
+    .plan-sub {
+      font-size: .85rem;
+      color: var(--c-muted);
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
+    }
+    .plan-list {
+      padding-left: 1.2rem;
+      margin: 1rem 0 0;
+      color: var(--c-muted);
+      font-size: .85rem;
+      font-weight: 300;
+    }
+    .plan-list li {
+      margin-bottom: 0.4rem;
+    }
+    .btn-plan {
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+    .btn-outline-plan {
+      background: transparent;
+      border: 1px solid var(--c-cyan);
+      color: var(--c-cyan);
+    }
+    .btn-outline-plan:hover {
+      background: var(--c-cyan);
+      color: var(--c-bg);
+    }
 
-    .note-card{
-      border: 1px solid rgba(0,0,0,.06);
-      border-radius: 18px;
-      background:#fff;
+    /* Nota impresión */
+    .note-card {
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    /* Pasos */
+    .step-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--grad);
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .step-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: .02em;
+      margin-bottom: 0.25rem;
+    }
+    .step-content p {
+      color: var(--c-muted);
+      font-size: .9rem;
+      font-weight: 300;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--grad);
+      padding: clamp(3rem, 7vw, 5rem) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M300 600 L0 0 L600 0 Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;
+      pointer-events: none;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      letter-spacing: .02em;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cta-band p {
+      color: rgba(255,255,255,.8);
+      max-width: 520px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--c-bg);
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--c-surface);
+      border-top: 1px solid var(--c-border);
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-links { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+    .footer-links a {
+      color: var(--c-muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--c-text); }
+    .footer-copy {
+      color: var(--c-muted);
+      font-size: .82rem;
+      font-family: var(--font-mono);
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media(max-width: 768px) {
+      .plan-card { padding: 1.5rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .hero-features { flex-direction: column; align-items: center; gap: 1rem; }
+      .hero-feature { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
+<body>
 
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container px-5">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <span class="fw-bold">LATIN NEXO</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#features">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li class="nav-item"><a href="https://latinmerch.com.ar" class="nav-link">LatinMerch</a></li>
-
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-brand btn-sm px-3" target="_blank" rel="noreferrer"
-               href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A">
-              Cotizar por WhatsApp
-            </a>
-          </li>
+  <!-- Navegación -->
+  <nav role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Latin Nexo – Inicio">LATIN NEXO</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a></li>
         </ul>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i> Cotizar
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="bg-dark py-5">
-    <div class="container px-5">
-      <div class="row gx-5 align-items-center justify-content-center">
-        <div class="col-lg-10 col-xl-9">
-          <div class="my-4 text-center text-lg-start">
-            <div class="hero-kicker text-white-50 mb-3">
-              Menú QR · Diseño único · Rápido y prolijo
-            </div>
+  <main>
 
-            <h1 class="display-5 fw-bolder text-white mb-2">
-              Tu <span class="text-brand">Menú QR</span> listo para usar.
-            </h1>
-
-            <p class="lead fw-normal text-white-50 mb-4">
-              Te armamos un menú digital con estética profesional y un QR que podés imprimir en mesas, vidrieras o delivery.
-              Elegí la opción que mejor se adapte a tu negocio: <strong>QR estático sin mensualidad</strong> o <strong>plan mensual autogestionable</strong>.
-            </p>
-
-            <div class="row g-3 mt-3">
-              <div class="col-md-4">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-phone fs-4"></i></div>
-                  <div>
-                    <div class="text-white fw-bold">Mobile first</div>
-                    <div class="muted">Se lee perfecto en celular.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-stars fs-4"></i></div>
-                  <div>
-                    <div class="text-white fw-bold">Diseño exclusivo</div>
-                    <div class="muted">Adaptado a la imagen de tu local.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="d-flex gap-3 align-items-start">
-                  <div class="feature-icon bg-brand text-white"><i class="bi bi-qr-code fs-4"></i></div>
-                  <div>
-                    <div class="text-white fw-bold">QR listo</div>
-                    <div class="muted">Lo imprimís y empezás.</div>
-                  </div>
-                </div>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-inner reveal">
+          <div class="hero-kicker">
+            <i class="bi bi-qr-code"></i> Menú QR · Diseño único · Rápido y prolijo
+          </div>
+          <h1>
+            TU <span class="grad-text">MENÚ QR</span><br />
+            LISTO PARA USAR
+          </h1>
+          <p class="hero-sub">
+            Te armamos un menú digital con estética profesional y un QR que podés imprimir en mesas, vidrieras o delivery.
+            Elegí la opción que mejor se adapte a tu negocio: <strong>QR estático sin mensualidad</strong> o <strong>plan mensual autogestionable</strong>.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a class="btn btn-primary" href="#planes">Ver planes</a>
+            <a class="btn btn-ghost" href="#como-funciona">Cómo funciona</a>
+          </div>
+          <div class="hero-features">
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-phone"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">Mobile first</div>
+                <div class="desc">Se lee perfecto en celular</div>
               </div>
             </div>
-
-            <div class="mt-4">
-              <a class="btn btn-brand btn-lg px-4" href="#planes">Ver planes</a>
-              <a class="btn btn-outline-light btn-lg px-4 ms-2" href="#como-funciona">Cómo funciona</a>
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-stars"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">Diseño exclusivo</div>
+                <div class="desc">Adaptado a la imagen de tu local</div>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="bi bi-qr-code"></i></div>
+              <div class="hero-feature-text">
+                <div class="title">QR listo</div>
+                <div class="desc">Lo imprimís y empezás</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Planes -->
-  <section class="py-5 bg-light" id="planes">
-    <div class="container px-5 my-5">
-      <div class="text-center mb-5">
-        <h2 class="fw-bolder">Planes de Menú QR</h2>
-        <p class="lead fw-normal text-muted mb-0">Elegí el modelo que se adapta a tu forma de trabajar.</p>
-      </div>
+    <!-- Planes -->
+    <section class="section-dark-bg" id="planes">
+      <div class="container">
+        <div class="text-center reveal" style="margin-bottom: 3rem;">
+          <span class="section-label">// Planes</span>
+          <h2 class="section-title">ELEGÍ EL MODELO QUE<br /><span class="grad-text">SE ADAPTA A TU NEGOCIO</span></h2>
+          <p class="section-sub">Sin costos ocultos. Todo incluido.</p>
+        </div>
 
-      <div class="row g-4">
-        <!-- QR Estático -->
-        <div class="col-lg-6">
-          <div class="plan-card">
-            <span class="plan-badge">Sin mensualidad</span>
-
-            <div class="feature-icon bg-brand text-white mb-3">
-              <i class="bi bi-file-earmark-text fs-4"></i>
-            </div>
-
-            <h3 class="fw-bold mb-1">Menú QR Estático</h3>
-            <div class="text-muted mb-3">Un solo diseño, QR fijo. Ideal si actualizás precios o platillos de vez en cuando.</div>
-
-            <div class="plan-price">$ 45.000</div>
-            <div class="plan-sub">Pago único · Incluye diseño, hosting y QR</div>
-
-            <ul class="plan-list text-muted">
-              <li>Diseño personalizado del menú (coherente con tu marca)</li>
-              <li>Formato optimizado para celular</li>
-              <li>Link único + QR en alta resolución para imprimir</li>
-              <li>Entrega en 48/72 horas hábiles</li>
-              <li><strong>Actualizaciones posteriores:</strong> $ 4.000 por modificación (precios, textos o productos)</li>
-            </ul>
-
-            <div class="mt-4">
-              <a class="btn btn-brand w-100" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20MEN%C3%9A%20QR%20EST%C3%81TICO%20($45.000).%20Mi%20local%20es%3A">
+        <div class="row g-4">
+          <!-- QR Estático -->
+          <div class="col-lg-6 reveal">
+            <div class="plan-card">
+              <span class="plan-badge">Sin mensualidad</span>
+              <div class="plan-icon"><i class="bi bi-file-earmark-text"></i></div>
+              <h3 class="plan-title">Menú QR Estático</h3>
+              <p class="text-muted small mb-2" style="font-weight:300;">Un solo diseño, QR fijo. Ideal si actualizás precios o platillos de vez en cuando.</p>
+              <div class="plan-price">$ 45.000</div>
+              <div class="plan-sub">Pago único · Incluye diseño, hosting y QR</div>
+              <ul class="plan-list">
+                <li>Diseño personalizado del menú (coherente con tu marca)</li>
+                <li>Formato optimizado para celular</li>
+                <li>Link único + QR en alta resolución para imprimir</li>
+                <li>Entrega en 48/72 horas hábiles</li>
+                <li><strong>Actualizaciones posteriores:</strong> $ 4.000 por modificación (precios, textos o productos)</li>
+              </ul>
+              <a class="btn btn-primary btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20MEN%C3%9A%20QR%20EST%C3%81TICO%20($45.000).%20Mi%20local%20es%3A" target="_blank">
                 <i class="bi bi-whatsapp me-2"></i>Quiero este plan
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- QR Autogestionable mensual -->
-        <div class="col-lg-6">
-          <div class="plan-card border-brand">
-            <span class="plan-badge">Autogestionable</span>
-
-            <div class="feature-icon bg-brand text-white mb-3">
-              <i class="bi bi-pencil-square fs-4"></i>
-            </div>
-
-            <h3 class="fw-bold mb-1">Menú QR Mensual</h3>
-            <div class="text-muted mb-3">Para locales que actualizan seguido: promos diarias, precios, stock o disponibilidad.</div>
-
-            <div class="plan-price">$ 15.000 <span style="font-size:1rem;">/ mes</span></div>
-            <div class="plan-sub"><strong>Promo lanzamiento:</strong> primeros 2 meses al 50% → $ 7.500 por mes</div>
-
-            <ul class="plan-list text-muted">
-              <li>Diseño único inicial incluido</li>
-              <li>Panel de administración para que edites cuando quieras</li>
-              <li>Actualizaciones ilimitadas durante la suscripción</li>
-              <li>QR permanente (no reimprimís al cambiar datos)</li>
-              <li>Soporte técnico incluido</li>
-              <li>Cancelación sin penalización</li>
-            </ul>
-
-            <div class="mt-4">
-              <a class="btn btn-outline-brand w-100" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20MEN%C3%9A%20QR%20MENSUAL%20($15.000/mes%20-%20promo%202%20meses%2050%25).%20Mi%20local%20es%3A">
+          <!-- QR Autogestionable mensual -->
+          <div class="col-lg-6 reveal">
+            <div class="plan-card" style="border-color: rgba(30,173,210,.4);">
+              <span class="plan-badge">Autogestionable</span>
+              <div class="plan-icon"><i class="bi bi-pencil-square"></i></div>
+              <h3 class="plan-title">Menú QR Mensual</h3>
+              <p class="text-muted small mb-2" style="font-weight:300;">Para locales que actualizan seguido: promos diarias, precios, stock o disponibilidad.</p>
+              <div class="plan-price">$ 15.000 <span style="font-size:1rem;">/ mes</span></div>
+              <div class="plan-sub"><strong>Promo lanzamiento:</strong> primeros 2 meses al 50% → $ 7.500 por mes</div>
+              <ul class="plan-list">
+                <li>Diseño único inicial incluido</li>
+                <li>Panel de administración para que edites cuando quieras</li>
+                <li>Actualizaciones ilimitadas durante la suscripción</li>
+                <li>QR permanente (no reimprimís al cambiar datos)</li>
+                <li>Soporte técnico incluido</li>
+                <li>Cancelación sin penalización</li>
+              </ul>
+              <a class="btn btn-outline-plan btn-plan" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20el%20MEN%C3%9A%20QR%20MENSUAL%20($15.000/mes%20-%20promo%202%20meses%2050%25).%20Mi%20local%20es%3A" target="_blank">
                 <i class="bi bi-pencil-square me-2"></i>Quiero autogestión
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Información adicional: QR impreso y servicio -->
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-10">
-          <div class="note-card p-4">
-            <div class="d-flex gap-3 align-items-start">
-              <div class="feature-icon bg-brand text-white">
-                <i class="bi bi-printer fs-4"></i>
-              </div>
-              <div>
-                <div class="fw-bold">¿Necesitás el QR impreso?</div>
-                <div class="text-muted">
-                  Además del código digital, podemos fabricar el QR en <strong>impresión 3D, placas de madera, metal grabado con láser o vinilo adhesivo</strong>.
-                  Consultanos precios y materiales.
+        <!-- Información impresión -->
+        <div class="row justify-content-center mt-5 reveal">
+          <div class="col-lg-10">
+            <div class="note-card">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="plan-icon" style="width: 44px; height: 44px; flex-shrink: 0;"><i class="bi bi-printer"></i></div>
+                <div>
+                  <div class="fw-bold mb-1">¿Necesitás el QR impreso?</div>
+                  <div class="text-muted" style="font-size: .9rem;">
+                    Además del código digital, podemos fabricar el QR en <strong>impresión 3D, placas de madera, metal grabado con láser o vinilo adhesivo</strong>.
+                    Consultanos precios y materiales.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Cómo funciona (ancla) -->
-  <section id="como-funciona" class="py-5">
-    <div class="container px-5">
-      <div class="row g-5">
-        <div class="col-lg-6">
-          <h2 class="fw-bolder">¿Cómo trabajamos?</h2>
-          <p class="lead text-muted">Un proceso simple y sin vueltas.</p>
-          <ol class="list-unstyled mt-4">
-            <li class="mb-3 d-flex gap-3">
-              <div class="feature-icon bg-brand text-white"><span class="fw-bold fs-5">1</span></div>
-              <div><strong>Contanos tu negocio</strong> – enviándonos un WhatsApp o mail con los productos, precios y estilos de referencia.</div>
-            </li>
-            <li class="mb-3 d-flex gap-3">
-              <div class="feature-icon bg-brand text-white"><span class="fw-bold fs-5">2</span></div>
-              <div><strong>Creamos el diseño</strong> – hacemos una propuesta de menú digital adaptada a tu marca (colores, logo, tipografía).</div>
-            </li>
-            <li class="mb-3 d-flex gap-3">
-              <div class="feature-icon bg-brand text-white"><span class="fw-bold fs-5">3</span></div>
-              <div><strong>Lo revisás y aprobás</strong> – podés pedir cambios antes de la entrega final.</div>
-            </li>
-            <li class="mb-3 d-flex gap-3">
-              <div class="feature-icon bg-brand text-white"><span class="fw-bold fs-5">4</span></div>
-              <div><strong>Recibís tu QR + link</strong> – lo imprimís y listo. En el plan mensual te damos acceso al panel.</div>
-            </li>
-          </ol>
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-light rounded-3 p-4 h-100">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-chat-dots fs-1 text-brand me-3"></i>
-              <h3 class="h4 mb-0">¿Tenés dudas?</h3>
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal">
+            <span class="section-label">// Proceso</span>
+            <h2 class="section-title">TAN SIMPLE<br /><span class="grad-text">COMO ESTO</span></h2>
+            <p class="section-sub mb-4">Un proceso sin vueltas. Vos te enfocás en tu negocio, nosotros en el menú digital.</p>
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Contanos tu negocio</h3>
+                <p>Envíanos un WhatsApp o mail con los productos, precios y estilos de referencia.</p>
+              </div>
             </div>
-            <p>Respondemos rápido por WhatsApp. También podemos coordinar una breve llamada para entender exactamente lo que necesitás.</p>
-            <a class="btn btn-brand mt-2" target="_blank" rel="noreferrer" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Vi%20el%20men%C3%BA%20QR%20y%20tengo%20una%20consulta%3A">
-              <i class="bi bi-whatsapp me-2"></i> Consultar ahora
-            </a>
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Creamos el diseño</h3>
+                <p>Hacemos una propuesta de menú digital adaptada a tu marca (colores, logo, tipografía).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Lo revisás y aprobás</h3>
+                <p>Podés pedir cambios antes de la entrega final.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Recibís tu QR + link</h3>
+                <p>Lo imprimís y listo. En el plan mensual te damos acceso al panel.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="bg-surface p-5 rounded-3" style="background: var(--c-surface2); border: 1px solid var(--c-border);">
+              <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-chat-dots fs-1 text-brand me-3"></i>
+                <h3 class="h2 mb-0" style="font-family: var(--font-display);">¿Tenés dudas?</h3>
+              </div>
+              <p class="text-muted mb-4">Respondemos rápido por WhatsApp. También podemos coordinar una breve llamada para entender exactamente lo que necesitás.</p>
+              <a class="btn btn-primary" target="_blank" rel="noreferrer" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Vi%20el%20men%C3%BA%20QR%20y%20tengo%20una%20consulta%3A">
+                <i class="bi bi-whatsapp me-2"></i> Consultar ahora
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sección de contacto (para el ancla #contacto) -->
-  <section id="contacto" class="py-5 bg-light">
-    <div class="container px-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="fw-bolder">¿Empezamos con tu Menú QR?</h2>
-          <p class="lead text-muted mb-4">Escribinos por WhatsApp o correo electrónico y te asesoramos sin compromiso.</p>
-          <div class="d-grid gap-3 d-sm-flex justify-content-center">
-            <a class="btn btn-brand btn-lg px-4" target="_blank" rel="noreferrer" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A">
-              <i class="bi bi-whatsapp me-2"></i>WhatsApp
-            </a>
-            <a class="btn btn-outline-brand btn-lg px-4" href="mailto:info@latinnexo.com.ar?subject=Menú%20QR%20-%20Consulta">
-              <i class="bi bi-envelope me-2"></i>info@latinnexo.com.ar
-            </a>
-          </div>
+    <!-- CTA Band contacto -->
+    <section class="cta-band" id="contacto">
+      <div class="container">
+        <h2>¿EMPEZAMOS CON<br />TU MENÚ QR?</h2>
+        <p>Escribinos por WhatsApp o correo electrónico y te asesoramos sin compromiso.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-white" href="https://wa.me/5491162366175?text=Hola%20LATIN%20NEXO!%20Quiero%20un%20MEN%C3%9A%20QR.%20Mi%20local%20es%3A" target="_blank">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a class="btn" href="mailto:contacto@latinnexo.com" style="background: rgba(255,255,255,.15); color:#fff; border: 1px solid rgba(255,255,255,.3);">
+            <i class="bi bi-envelope"></i> contacto@latinnexo.com
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+  </main>
 
-<!-- Footer -->
-<footer class="bg-dark py-4 mt-auto">
-  <div class="container px-5">
-    <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-      <div class="col-auto">
-        <div class="small m-0 text-white">
-          &copy; LATIN NEXO 2026 <span id="year"></span>
-        </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">LATIN NEXO</div>
+        <nav class="footer-links" aria-label="Links del pie de página">
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="about.html">Nosotros</a>
+          <a href="https://latinmerch.com.ar" target="_blank" rel="noopener">LatinMerch</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <span class="footer-copy">&copy; LATIN NEXO 2026 <span id="year"></span></span>
       </div>
-      <div class="col-auto">
-        <a class="link-light small" href="index.html#features">Servicios</a>
-        <span class="text-white mx-1">&middot;</span>
-        <a class="link-light small" href="#contacto">Contacto</a>
-      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+        navToggle.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+      });
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', false);
+          navToggle.innerHTML = '<i class="bi bi-list"></i>';
+        });
+      });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.05) + 's';
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Año dinámico
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+  </script>
 
 </body>
 </html>
